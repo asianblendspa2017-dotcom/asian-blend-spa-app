@@ -221,6 +221,21 @@ a { color: var(--teal); }
 }
 .special-card.note-card p { color: var(--muted); font-size: 0.82rem; font-style: italic; }
 
+.special-items {
+  margin: 8px 0 4px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.84rem;
+  color: #3a4440;
+}
+.special-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
 .booking-form { display: flex; flex-direction: column; gap: 14px; }
 .booking-form label {
   display: flex;
@@ -383,6 +398,7 @@ a { color: var(--teal); }
   .therapy-benefits { color: #9fb0a8; }
   .special-card.note-card { border-color: rgba(244, 233, 216, 0.2); }
   .special-card.note-card p { color: #9fb0a8; }
+  .special-items { color: #cdd8d2; }
   .policy-box { background: #17221e; border-color: rgba(244, 233, 216, 0.15); }
   .policy-box summary { color: var(--gold-light); }
   .policy-box ul { color: #cdd8d2; }

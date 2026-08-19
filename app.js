@@ -160,6 +160,20 @@ const THERAPIES = [
 
 const SPECIALS = [
   { badge: "New Client", title: "First Visit Discount", body: "10% off for new clients — bookings essential." },
+  {
+    badge: "The ENTERTAINER",
+    title: "App-Exclusive Deals",
+    body: "Available via The ENTERTAINER app. Advance booking required. Valid until 30 Dec 2026.",
+    items: [
+      "30% off 60-min Deep Tissue Sports Massage",
+      "30% off Oil & Philippine Hilot Massage",
+      "30% off 60-min Sports Massage",
+      "60-min Hot Stone Massage — Buy One Get One Free",
+      "30% off Thai Massage",
+      "30% off Swedish Massage",
+    ],
+    link: "https://www.theentertainerme.com/outlets/asian-blend-spa/detail?m=62963&o=121344",
+  },
 ];
 
 const state = { therapyFilter: "All" };
@@ -218,6 +232,8 @@ function renderSpecials() {
       <span class="badge">${s.badge}</span>
       <h4>${s.title}</h4>
       <p>${s.body}</p>
+      ${s.items ? `<ul class="special-items">${s.items.map(item => `<li>${item}</li>`).join("")}</ul>` : ""}
+      ${s.link ? `<a class="pill-btn special-link" href="${s.link}" target="_blank" rel="noopener">View Offer</a>` : ""}
     </div>
   `).join("") + `
     <div class="special-card note-card">
