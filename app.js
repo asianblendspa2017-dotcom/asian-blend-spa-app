@@ -308,12 +308,39 @@ function sendBookingByEmail(b) {
   window.location.href = `mailto:${SPA_EMAIL}?subject=${subject}&body=${body}`;
 }
 
+function initInstallGuide() {
+  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  if (isStandalone) {
+    $("#installGuide").classList.add("hidden");
+    return;
+  }
+
+  const ua = navigator.userAgent;
+  const isIos = /iPhone|iPad|iPod/.test(ua);
+  const isAndroid = /Android/.test(ua);
+  const platform = isAndroid ? "android" : "ios";
+
+  const setPlatform = p => {
+    $all("#installTabs .filter-chip").forEach(btn => btn.classList.toggle("active", btn.dataset.platform === p));
+    $("#installStepsIos").classList.toggle("hidden", p !== "ios");
+    $("#installStepsAndroid").classList.toggle("hidden", p !== "android");
+  };
+  setPlatform(platform);
+
+  $("#installTabs").addEventListener("click", e => {
+    const btn = e.target.closest(".filter-chip");
+    if (!btn) return;
+    setPlatform(btn.dataset.platform);
+  });
+}
+
 function init() {
   renderTherapyFilters();
   renderTherapies();
   renderSpecials();
   populateServiceSelect();
   renderBookings();
+  initInstallGuide();
   showView("home");
 
   $all("[data-goto]").forEach(el => {

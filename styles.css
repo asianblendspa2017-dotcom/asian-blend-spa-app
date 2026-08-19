@@ -111,6 +111,21 @@ a { color: var(--teal); }
 .info-card p { margin: 6px 0; font-size: 0.9rem; }
 .edit-note { color: var(--muted); font-style: italic; font-size: 0.78rem !important; }
 
+.install-guide { margin-bottom: 16px; }
+.install-sub { color: var(--muted); font-size: 0.82rem !important; margin-top: -4px !important; }
+.install-guide .filter-row { margin: 12px 0; }
+.install-steps {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #3a4440;
+}
+.icon-inline { font-size: 0.9em; }
+
 .filter-row {
   display: flex;
   gap: 8px;
@@ -404,4 +419,5 @@ a { color: var(--teal); }
   .policy-box ul { color: #cdd8d2; }
   .checkbox-label span { color: #ecf3ef; }
   .fresha-btn { color: var(--deep); }
+  .install-steps { color: #cdd8d2; }
 }
