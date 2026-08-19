@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asian Blend Spa</title>
+<meta name="theme-color" content="#1f5b52">
+<meta name="description" content="Book therapies, browse monthly specials, and manage your Asian Blend Spa sessions.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ABS Spa">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="icons/icon-192.png" alt="" class="brand-mark">
+    <div>
+      <h1>Asian Blend Spa</h1>
+      <p class="tagline">Balance. Restore. Unwind.</p>
+    </div>
+  </div>
+  <button id="installBtn" class="install-btn hidden" type="button">Install App</button>
+</header>
+
+<main id="app">
+
+  <section id="view-home" class="view">
+    <div class="hero">
+      <h2>Welcome back</h2>
+      <p>Your handy companion for booking sessions, catching this month's specials, and browsing our therapy menu — anytime, even offline.</p>
+    </div>
+
+    <div class="card-grid">
+      <button class="quick-card" data-goto="book">
+        <span class="quick-icon">📅</span>
+        <span>Book a Session</span>
+      </button>
+      <button class="quick-card" data-goto="specials">
+        <span class="quick-icon">🏷️</span>
+        <span>Specials &amp; Discounts</span>
+      </button>
+      <button class="quick-card" data-goto="therapies">
+        <span class="quick-icon">🌿</span>
+        <span>Browse Therapies</span>
+      </button>
+      <button class="quick-card" data-goto="bookings">
+        <span class="quick-icon">🗂️</span>
+        <span>My Bookings</span>
+      </button>
+    </div>
+
+    <div class="info-card">
+      <h3>Visit Us</h3>
+      <p><strong>Hours:</strong> 9:00 AM – 7:00 PM</p>
+      <p><strong>Phone / WhatsApp:</strong> <a href="tel:+27840377167">084 037 7167</a></p>
+      <p><strong>Address:</strong> 55 Porterfield Road, Blouberg</p>
+      <p><strong>Website:</strong> <a href="https://www.asianblendspa.com" target="_blank" rel="noopener">asianblendspa.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/asianblendspa" target="_blank" rel="noopener">@asianblendspa</a></p>
+      <p><strong>Facebook:</strong> Asian Blend Spa</p>
+      <p class="edit-note">Bookings essential · please arrive 10–15 minutes early</p>
+    </div>
+  </section>
+
+  <section id="view-therapies" class="view hidden">
+    <h2>Therapies</h2>
+    <div class="filter-row" id="therapyFilters"></div>
+    <div class="list" id="therapyList"></div>
+  </section>
+
+  <section id="view-specials" class="view hidden">
+    <h2>Monthly Specials &amp; Discounts</h2>
+    <div class="list" id="specialsList"></div>
+  </section>
+
+  <section id="view-book" class="view hidden">
+    <h2>Book a Session</h2>
+
+    <a id="freshaBtn" class="primary-btn fresha-btn" href="#" target="_blank" rel="noopener">Book Instantly on Fresha</a>
+    <p class="form-hint">or send a quick request below and we'll confirm by WhatsApp</p>
+
+    <form id="bookingForm" class="booking-form">
+      <label>Full Name
+        <input type="text" name="name" required autocomplete="name">
+      </label>
+      <label>Phone Number
+        <input type="tel" name="phone" required autocomplete="tel">
+      </label>
+      <label>Email (optional)
+        <input type="email" name="email" autocomplete="email">
+      </label>
+      <label>Therapy
+        <select name="service" id="serviceSelect" required></select>
+      </label>
+      <div class="row2">
+        <label>Preferred Date
+          <input type="date" name="date" required>
+        </label>
+        <label>Preferred Time
+          <input type="time" name="time" required>
+        </label>
+      </div>
+      <label>Therapist Preference (optional)
+        <input type="text" name="therapist" placeholder="No preference">
+      </label>
+      <label>Notes
+        <textarea name="notes" rows="3" placeholder="Allergies, focus areas, first visit, etc."></textarea>
+      </label>
+
+      <details class="policy-box">
+        <summary>Booking &amp; Cancellation Policy</summary>
+        <ul>
+          <li>Please arrive 10–15 minutes prior to your scheduled treatment.</li>
+          <li>First-time guests will be required to complete a pre-consultation form.</li>
+          <li>Guests younger than 16 must be accompanied by an adult for the duration of treatment.</li>
+          <li>Please switch off cellphones during treatment.</li>
+          <li>Book at least 24 hours ahead, except on holidays and Sundays.</li>
+          <li>Home services require 48 hours notice, a minimum of 3 people, minimum 90-minute session, 50% deposit, and a transport fee per kilometer.</li>
+          <li>Full payment is required to secure weekend couples massage bookings and group bookings.</li>
+          <li>Cancellations made less than 24 hours before your appointment, or no-shows, will be charged the full treatment fee.</li>
+          <li>Late arrivals may result in a shortened session, with the full fee still applying.</li>
+          <li>All prices are subject to change without prior notice.</li>
+        </ul>
+      </details>
+      <label class="checkbox-label">
+        <input type="checkbox" name="policyAgree" required>
+        <span>I have read and agree to the booking &amp; cancellation policy</span>
+      </label>
+
+      <button type="submit" class="primary-btn">Request Booking</button>
+      <p class="form-hint">This saves your request on this device and lets you send it to us instantly by WhatsApp or email — we'll confirm your slot.</p>
+    </form>
+  </section>
+
+  <section id="view-bookings" class="view hidden">
+    <h2>My Bookings</h2>
+    <div class="list" id="myBookingsList"></div>
+    <p class="empty-note hidden" id="noBookings">No booking requests yet. Head to "Book a Session" to request one.</p>
+  </section>
+
+</main>
+
+<nav class="tabbar">
+  <button class="tab" data-goto="home" aria-label="Home">
+    <span>🏠</span><small>Home</small>
+  </button>
+  <button class="tab" data-goto="therapies" aria-label="Therapies">
+    <span>🌿</span><small>Therapies</small>
+  </button>
+  <button class="tab" data-goto="specials" aria-label="Specials">
+    <span>🏷️</span><small>Specials</small>
+  </button>
+  <button class="tab" data-goto="book" aria-label="Book">
+    <span>📅</span><small>Book</small>
+  </button>
+  <button class="tab" data-goto="bookings" aria-label="My Bookings">
+    <span>🗂️</span><small>Mine</small>
+  </button>
+</nav>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
