@@ -1,43 +1,15 @@
-const CACHE_NAME = "abs-spa-v1";
-const ASSETS = [
-  "./",
-  "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./manifest.json",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png",
-  "./icons/apple-touch-icon.png",
-];
-
-self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
-  );
+// The app has been retired. Clear any cached app data and unregister
+// so devices that already installed it stop running it offline.
+self.addEventListener("install", () => {
   self.skipWaiting();
 });
 
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
-  );
-  self.clients.claim();
-});
-
-self.addEventListener("fetch", event => {
-  if (event.request.method !== "GET") return;
-  event.respondWith(
-    caches.match(event.request).then(cached => {
-      const fetchPromise = fetch(event.request)
-        .then(response => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
-          return response;
-        })
-        .catch(() => cached);
-      return cached || fetchPromise;
-    })
+    caches.keys()
+      .then(keys => Promise.all(keys.map(k => caches.delete(k))))
+      .then(() => self.registration.unregister())
+      .then(() => self.clients.matchAll({ type: "window" }))
+      .then(clients => clients.forEach(client => client.navigate(client.url)))
   );
 });
