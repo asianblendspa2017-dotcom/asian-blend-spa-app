@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Asian Blend Spa — Personalised Asian-Inspired Therapy &amp; Stretch Studio</title>
+<style>
+:root{
+  --jade:#1F4B43; --jade-2:#2E6B5E; --jade-3:#3F8577; --jade-4:#8FBFB2;
+  --sand:#F4EDE3; --cream:#FBF7F0; --blush:#EAD9CD;
+  --gold:#C9A227; --gold-soft:#E8D9A0; --clay:#B87A5A;
+  --ink:#22302C; --ink-soft:#546862; --line:#E2D7C8;
+  --warn:#B8860B; --stop:#A63A2E; --ok:#2E6B5E;
+  --r:18px; --r-sm:12px; --sh:0 10px 30px rgba(31,75,67,.10); --sh-sm:0 4px 14px rgba(31,75,67,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--cream);line-height:1.62;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 400px at 12% -5%,rgba(63,133,119,.10),transparent 60%),radial-gradient(700px 380px at 92% 4%,rgba(201,162,39,.10),transparent 60%);
+  background-attachment:fixed;
+}
+h1,h2,h3,h4{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-weight:600;line-height:1.24;color:var(--jade);margin:0 0 .45em}
+h1{font-size:2.35rem;letter-spacing:-.02em}
+h2{font-size:1.72rem;letter-spacing:-.01em}
+h3{font-size:1.16rem}
+h4{font-size:1rem}
+p{margin:0 0 .85em}
+a{color:var(--jade-2)}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.hidden{display:none !important}
+.small{font-size:.85rem}
+.muted{color:var(--ink-soft)}
+.tiny{font-size:.78rem}
+.center{text-align:center}
+
+/* ---------- topbar ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(251,247,240,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--jade)}
+.mark{width:40px;height:40px;flex:0 0 40px}
+.brand strong{display:block;font-family:Georgia,serif;font-size:1.06rem;letter-spacing:.01em;line-height:1.15}
+.brand em{display:block;font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.nav{display:flex;gap:22px;flex-wrap:wrap}
+.nav a{text-decoration:none;color:var(--ink-soft);font-size:.88rem;font-weight:600;letter-spacing:.02em;padding-bottom:2px;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--jade);border-color:var(--gold)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-in{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:58px 0 52px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--clay);margin-bottom:16px}
+.eyebrow:before{content:"";width:26px;height:1px;background:var(--clay)}
+.hero h1 span{color:var(--clay)}
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:60ch}
+.hero-art{display:flex;justify-content:center}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.95rem;padding:13px 24px;border-radius:999px;text-decoration:none;transition:.18s transform,.18s box-shadow,.18s background}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--jade);color:#fff;box-shadow:var(--sh-sm)}
+.btn-primary:hover{background:var(--jade-2)}
+.btn-gold{background:var(--gold);color:#2A2410;box-shadow:var(--sh-sm)}
+.btn-gold:hover{background:#B8911F}
+.btn-ghost{background:transparent;color:var(--jade);border:1.5px solid var(--jade-4)}
+.btn-ghost:hover{border-color:var(--jade);background:rgba(63,133,119,.07)}
+.btn-sm{padding:9px 16px;font-size:.83rem}
+
+/* ---------- sections ---------- */
+section{padding:46px 0}
+.sec-head{max-width:74ch;margin-bottom:26px}
+.sec-head p{color:var(--ink-soft)}
+
+/* ---------- cards ---------- */
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-sm);padding:22px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+/* ---------- form ---------- */
+.form-card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh);padding:30px}
+fieldset{border:0;border-top:1px solid var(--line);margin:0;padding:24px 0 6px}
+fieldset:first-of-type{border-top:0;padding-top:6px}
+legend{font-family:Georgia,serif;font-size:1.06rem;color:var(--jade);font-weight:600;padding-right:12px}
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 24px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field>label,.flabel{font-size:.83rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+input[type=text],input[type=number],select{font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--cream);color:var(--ink)}
+input[type=text]:focus,input[type=number]:focus,select:focus{outline:none;border-color:var(--jade-3);background:#fff}
+input[type=range]{width:100%;accent-color:var(--jade-2)}
+.age-row{display:flex;align-items:center;gap:14px}
+.age-badge{font-family:Georgia,serif;font-size:1.5rem;color:var(--jade);min-width:64px;text-align:center;background:var(--sand);border-radius:var(--r-sm);padding:6px 10px}
+.picks{display:flex;flex-wrap:wrap;gap:9px}
+.pick{position:relative;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1.5px solid var(--line);border-radius:999px;background:var(--cream);cursor:pointer;font-size:.88rem;font-weight:600;color:var(--ink-soft);transition:.15s}
+.pick:hover{border-color:var(--jade-4);color:var(--jade)}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick.on{background:var(--jade);border-color:var(--jade);color:#fff}
+.pick.on.culture{background:var(--clay);border-color:var(--clay)}
+.shape-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.shape{border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--cream);cursor:pointer;padding:12px 8px;text-align:center;transition:.15s}
+.shape svg{width:44px;height:66px;display:block;margin:0 auto 6px}
+.shape b{display:block;font-size:.82rem;color:var(--jade)}
+.shape i{display:block;font-style:normal;font-size:.68rem;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase}
+.shape:hover{border-color:var(--jade-4)}
+.shape.on{border-color:var(--jade);background:#fff;box-shadow:0 0 0 3px rgba(63,133,119,.15)}
+.consent{display:flex;gap:12px;align-items:flex-start;background:var(--sand);border-radius:var(--r-sm);padding:14px 16px;margin-top:8px}
+.consent input{margin-top:4px;accent-color:var(--jade-2);width:18px;height:18px}
+.presets{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.form-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+
+/* ---------- result pieces ---------- */
+.banner{background:linear-gradient(135deg,var(--jade) 0%,var(--jade-3) 100%);color:#fff;border-radius:22px;padding:34px;position:relative;overflow:hidden}
+.banner h2{color:#fff;margin-bottom:.25em}
+.banner p{color:rgba(255,255,255,.88);margin:0;max-width:70ch}
+.banner .greet{font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);font-weight:700;margin-bottom:10px}
+.banner .lotus{position:absolute;right:-30px;bottom:-40px;width:230px;opacity:.13}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:999px;padding:6px 14px;font-size:.79rem;font-weight:600}
+.chip.dark{background:var(--sand);border-color:var(--line);color:var(--jade)}
+.ribbon{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:4px 11px;border-radius:999px}
+.r-strong{background:#DCEFE8;color:#1F5A4B}
+.r-mod{background:#FBF0D6;color:#8A6A0B}
+.r-emerg{background:#EFE6F3;color:#6A4A7A}
+.r-mixed{background:#F2E7E2;color:#8A4B37}
+.r-stop{background:#F7DFDB;color:var(--stop)}
+.ther-card{display:flex;flex-direction:column;gap:12px}
+.ther-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.origin{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.why{background:var(--sand);border-radius:var(--r-sm);padding:12px 14px;font-size:.88rem}
+.why b{color:var(--jade)}
+ul.clean{list-style:none;padding:0;margin:0}
+ul.clean li{position:relative;padding-left:22px;margin-bottom:7px;font-size:.9rem;color:var(--ink-soft)}
+ul.clean li:before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--jade-4)}
+.evidence{font-size:.82rem;color:var(--ink-soft);border-left:3px solid var(--gold);padding-left:12px}
+.evidence a{font-weight:600}
+.score{font-family:Georgia,serif;font-size:1.5rem;color:var(--jade);line-height:1}
+.scorebox{text-align:center;background:var(--sand);border-radius:var(--r-sm);padding:8px 12px;min-width:62px}
+.scorebox i{display:block;font-style:normal;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.blocked{opacity:.72}
+.blocked .ther-top h3{text-decoration:line-through;text-decoration-color:var(--stop)}
+
+/* stretch cards */
+.stretch{display:grid;grid-template-columns:170px 1fr;gap:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-sm);padding:18px;position:relative}
+.pose{width:100%;height:auto;border-radius:14px;display:block;background:var(--cream)}
+.st-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.st-num{font-family:Georgia,serif;font-size:.8rem;color:var(--clay);letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.dose{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+.dose span{background:var(--sand);border-radius:8px;padding:5px 11px;font-size:.8rem;font-weight:700;color:var(--jade)}
+.cue{background:#FBF0D6;border-left:3px solid var(--warn);border-radius:0 10px 10px 0;padding:10px 14px;font-size:.86rem;margin-top:10px}
+.modify{background:#F7DFDB;border-left:3px solid var(--stop);border-radius:0 10px 10px 0;padding:10px 14px;font-size:.86rem;margin-top:10px}
+.modify b{color:var(--stop)}
+.tagline{font-size:.85rem;color:var(--ink-soft);margin:0 0 4px}
+.area{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--jade-3);font-weight:700}
+
+/* settings */
+.set{display:flex;gap:12px;align-items:flex-start}
+.set .ic{width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:var(--sand);display:grid;place-items:center;font-size:1.05rem}
+.set b{display:block;font-size:.94rem;color:var(--jade)}
+.set span{font-size:.86rem;color:var(--ink-soft)}
+
+/* library table */
+.tbl{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
+.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{background:var(--jade);color:#fff;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{font-weight:700;color:var(--jade)}
+
+/* safety */
+.safety-box{background:#fff;border:1px solid var(--line);border-left:5px solid var(--stop);border-radius:var(--r);padding:22px;box-shadow:var(--sh-sm)}
+.safety-box h3{color:var(--stop)}
+.note{background:var(--sand);border-radius:var(--r-sm);padding:14px 16px;font-size:.87rem;color:var(--ink-soft)}
+
+/* cta */
+.cta{background:linear-gradient(135deg,#2A2410,#4A3F18);color:#fff;border-radius:22px;padding:34px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.85);margin:0}
+.cta .btn{justify-self:start}
+
+footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft);font-size:.83rem}
+.foot-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--jade);color:#fff;padding:13px 22px;border-radius:999px;font-size:.88rem;font-weight:600;box-shadow:var(--sh);opacity:0;pointer-events:none;transition:.3s;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:980px){
+  .hero-in,.cta{grid-template-columns:1fr}
+  .hero-art{order:-1}
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .shape-grid{grid-template-columns:repeat(3,1fr)}
+  .stretch{grid-template-columns:130px 1fr}
+  .nav{display:none}
+}
+@media(max-width:640px){
+  h1{font-size:1.85rem}
+  .fgrid,.g2{grid-template-columns:1fr}
+  .g3,.g4{grid-template-columns:1fr}
+  .shape-grid{grid-template-columns:repeat(2,1fr)}
+  .stretch{grid-template-columns:1fr}
+  .form-card,.banner,.cta{padding:22px}
+}
+@media print{
+  .topbar,.nav,.hero-cta,.form-actions,.toast,footer .btn{display:none !important}
+  body{background:#fff}
+  .card,.stretch,.banner{box-shadow:none;break-inside:avoid}
+}
+</style>
+
+<!-- ===== PWA / installable app ===== -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#1F4B43" />
+<meta name="description" content="Personalised Asian-inspired therapy and guided stretch plans for every age from 16 to 70, every body shape, and South African, Asian and Indian guests. Works offline." />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Asian Blend Spa" />
+<meta name="application-name" content="Asian Blend Spa" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="icons/icon-180.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+<link rel="icon" type="image/svg+xml" href="icons/icon-192.png" />
+<style>
+  /* --- installed-app chrome: safe areas, no bounce, no text selection on UI --- */
+  html, body { overscroll-behavior-y: contain; }
+  .topbar { padding-top: env(safe-area-inset-top); }
+  .topbar-in { padding-left: max(0px, env(safe-area-inset-left)); padding-right: max(0px, env(safe-area-inset-right)); }
+  .wrap { width: min(1180px, 92vw); }
+  body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+  footer { padding-bottom: calc(46px + env(safe-area-inset-bottom)); }
+  @media (display-mode: standalone) {
+    .topbar { border-bottom-color: rgba(31,75,67,.14); }
+  }
+  /* --- install / offline UI --- */
+  .appbar {
+    position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom));
+    transform: translateX(-50%) translateY(140%);
+    display: flex; align-items: center; gap: 14px;
+    background: #1F4B43; color: #fff; border-radius: 999px;
+    padding: 10px 12px 10px 20px; box-shadow: 0 14px 40px rgba(31,75,67,.34);
+    z-index: 120; max-width: calc(100vw - 24px);
+    transition: transform .38s cubic-bezier(.2,.8,.25,1), opacity .3s;
+    opacity: 0;
+  }
+  .appbar.on { transform: translateX(-50%) translateY(0); opacity: 1; }
+  .appbar .txt { font-size: .86rem; line-height: 1.3; }
+  .appbar .txt b { display: block; font-family: Georgia, serif; font-size: .95rem; }
+  .appbar .txt span { color: rgba(255,255,255,.78); font-size: .78rem; }
+  .appbar button {
+    font: inherit; font-weight: 700; font-size: .82rem; cursor: pointer;
+    border: 0; border-radius: 999px; padding: 10px 18px;
+    background: #C9A227; color: #2A2410; white-space: nowrap;
+  }
+  .appbar .x {
+    background: transparent; color: rgba(255,255,255,.7); font-size: 1.1rem;
+    padding: 6px 8px; line-height: 1;
+  }
+  .netbadge {
+    position: fixed; top: calc(env(safe-area-inset-top) + 8px); left: 50%;
+    transform: translateX(-50%) translateY(-160%);
+    background: #B8860B; color: #fff; font-size: .78rem; font-weight: 700;
+    padding: 7px 16px; border-radius: 999px; z-index: 130;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2); transition: transform .3s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .netbadge.on { transform: translateX(-50%) translateY(0); }
+  .netbadge.ok { background: #2E6B5E; }
+</style>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#1F4B43"/>
+        <path d="M20 8.5c3.1 4.2 3.1 8.4 0 12.6-3.1-4.2-3.1-8.4 0-12.6z" fill="#C9A227"/>
+        <path d="M10.5 13.5c5.2 0 8.6 2.6 9.6 7.4-5.2 0-8.6-2.6-9.6-7.4z" fill="#EAD9CD"/>
+        <path d="M29.5 13.5c-5.2 0-8.6 2.6-9.6 7.4 5.2 0 8.6-2.6 9.6-7.4z" fill="#EAD9CD"/>
+        <path d="M12.4 25.4c4.2-3.1 8.4-3.1 12.6 0-4.2 3.1-8.4 3.1-12.6 0z" fill="#8FBFB2"/>
+      </svg>
+      <span><strong>Asian Blend Spa</strong><em>Therapy &amp; Stretch Studio</em></span>
+    </a>
+    <nav class="nav">
+      <a href="#intake">Your profile</a>
+      <a href="#results">Your plan</a>
+      <a href="#library">Therapies</a>
+      <a href="#safety">Safety</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <div class="eyebrow">Thai · Japanese · Chinese · Ayurvedic</div>
+      <h1>Quality Asian-inspired therapies, <span>shaped around one body: yours.</span></h1>
+      <p class="lede">Tell us your age, your build, your goals and where you come from. Asian Blend Spa builds you a personal therapy blend and a guided stretch routine — from 16 to 70, every body shape, every background. For South African, Asian and Indian guests, in the language of welcome you know.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#intake">Build my personalised plan</a>
+        <a class="btn btn-ghost" href="#library">See the therapy menu</a>
+      </div>
+      <div class="chips" style="margin-top:26px">
+        <span class="chip dark">14 guided stretches</span>
+        <span class="chip dark">9 therapy traditions</span>
+        <span class="chip dark">6 age bands, 16–70</span>
+        <span class="chip dark">5 body shapes</span>
+        <span class="chip dark">Evidence-rated</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 300 320" width="300" height="320" aria-hidden="true">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2E6B5E"/><stop offset="1" stop-color="#1F4B43"/>
+          </linearGradient>
+        </defs>
+        <circle cx="150" cy="120" r="108" fill="url(#hg)"/>
+        <path d="M150 26c22 30 22 60 0 90-22-30-22-60 0-90z" fill="#C9A227" opacity=".95"/>
+        <path d="M60 60c40-6 70 10 84 44-40 6-70-10-84-44z" fill="#EAD9CD" opacity=".9"/>
+        <path d="M240 60c-40-6-70 10-84 44 40 6 70-10 84-44z" fill="#EAD9CD" opacity=".9"/>
+        <path d="M74 156c40-24 76-24 116 0-40 24-76 24-116 0z" fill="#8FBFB2" opacity=".85"/>
+        <ellipse cx="150" cy="232" rx="74" ry="17" fill="#3F8577" opacity=".5"/>
+        <ellipse cx="150" cy="264" rx="58" ry="14" fill="#3F8577" opacity=".38"/>
+        <ellipse cx="150" cy="292" rx="42" ry="11" fill="#3F8577" opacity=".28"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="intake">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Step one</div>
+      <h2>Your personalised intake</h2>
+      <p>Nothing here is a diagnosis. It simply lets us match pressure, pace, oils and stretches to the body in front of us. Everything stays on your own device — your profile is saved in your browser only.</p>
+    </div>
+
+    <div class="presets">
+      <span class="small muted" style="align-self:center">Try a sample guest:</span>
+      <button class="btn btn-ghost btn-sm" data-preset="teen">Sipho · 17 · athletic · male · South African</button>
+      <button class="btn btn-ghost btn-sm" data-preset="mid">Priya · 38 · curvy · female · Indian</button>
+      <button class="btn btn-ghost btn-sm" data-preset="senior">Mei · 68 · fuller · female · Asian</button>
+    </div>
+
+    <form class="form-card" id="intakeForm" autocomplete="off">
+      <fieldset>
+        <legend>About you</legend>
+        <div class="fgrid">
+          <div class="field">
+            <label for="name">Name we should use</label>
+            <input type="text" id="name" placeholder="e.g. Naledi" />
+          </div>
+          <div class="field">
+            <label for="culture">Cultural welcome you prefer</label>
+            <div class="picks" id="culturePicks">
+              <label class="pick culture" data-v="southafrican"><input type="radio" name="culture" value="southafrican" />South African</label>
+              <label class="pick culture" data-v="asian"><input type="radio" name="culture" value="asian" />Asian</label>
+              <label class="pick culture" data-v="indian"><input type="radio" name="culture" value="indian" />Indian</label>
+              <label class="pick culture" data-v="blended"><input type="radio" name="culture" value="blended" />Blended / no preference</label>
+            </div>
+          </div>
+        </div>
+        <div class="fgrid" style="margin-top:22px">
+          <div class="field">
+            <label for="age">Age — 16 to 70</label>
+            <div class="age-row">
+              <input type="range" id="ageRange" min="16" max="70" value="34" step="1" />
+              <div class="age-badge" id="ageBadge">34</div>
+            </div>
+            <div class="small muted" id="bandPreview">Band: 25–34 · Building years</div>
+          </div>
+          <div class="field">
+            <span class="flabel">Sex (affects joint load, hormonal &amp; pelvic-floor notes)</span>
+            <div class="picks" id="sexPicks">
+              <label class="pick" data-v="female"><input type="radio" name="sex" value="female" />Female</label>
+              <label class="pick" data-v="male"><input type="radio" name="sex" value="male" />Male</label>
+              <label class="pick" data-v="unspecified"><input type="radio" name="sex" value="unspecified" />Prefer not to say</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your body shape</legend>
+        <p class="small muted" style="margin-top:-4px">Shape changes leverage, joint load and where we focus. Choose the closest match — not a judgement, just engineering.</p>
+        <div class="shape-grid" id="shapeGrid"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What you want from today</legend>
+        <div class="picks" id="goalPicks"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Health notes &amp; conditions</legend>
+        <p class="small muted" style="margin-top:-4px">Tick anything that applies. We use it to remove or soften anything unsafe — and to tell you plainly what needs a doctor's clearance first.</p>
+        <div class="picks" id="condPicks"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your preferences</legend>
+        <div class="fgrid">
+          <div class="field">
+            <span class="flabel">Pressure you enjoy</span>
+            <div class="picks" id="pressurePicks">
+              <label class="pick" data-v="light"><input type="radio" name="pressure" value="light" />Light / soothing</label>
+              <label class="pick" data-v="medium"><input type="radio" name="pressure" value="medium" />Medium</label>
+              <label class="pick" data-v="firm"><input type="radio" name="pressure" value="firm" />Firm / deep</label>
+              <label class="pick" data-v="therapist"><input type="radio" name="pressure" value="therapist" />Let the therapist decide</label>
+            </div>
+          </div>
+          <div class="field">
+            <span class="flabel">Experience with Asian therapies</span>
+            <div class="picks" id="expPicks">
+              <label class="pick" data-v="first"><input type="radio" name="exp" value="first" />First time</label>
+              <label class="pick" data-v="some"><input type="radio" name="exp" value="some" />A few times</label>
+              <label class="pick" data-v="regular"><input type="radio" name="exp" value="regular" />Regular guest</label>
+            </div>
+          </div>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="consent" />
+          <span class="small">I understand this app offers general wellness guidance, not medical advice or treatment. I will tell my therapist about any condition, medication, injury or pregnancy, and I will get a doctor's clearance where the plan says so.</span>
+        </label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Create my personalised plan</button>
+        <button type="button" class="btn btn-ghost" id="resetBtn">Clear form</button>
+        <span class="small muted" id="savedNote"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="results" class="hidden">
+  <div class="wrap" id="resultsInner"></div>
+</section>
+
+<section id="library">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The menu</div>
+      <h2>Nine traditions, honestly rated</h2>
+      <p>We quote benefits conservatively and label how solid the research is. "Strong" means several good trials agree. "Mixed" means the science is genuinely divided — we will still tell you what guests report, but we will not dress it up as proven.</p>
+    </div>
+    <div class="grid g2" id="libraryGrid"></div>
+  </div>
+</section>
+
+<section id="safety">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Read before you book</div>
+      <h2>Contraindications &amp; safety</h2>
+      <p>Asian bodywork is generally very safe for healthy people. These are the situations where we change the plan, shorten it, or ask you to see a doctor first.</p>
+    </div>
+    <div class="grid g2">
+      <div class="safety-box">
+        <h3>When we stop and ask for clearance</h3>
+        <ul class="clean" id="safetyList"></ul>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Universal rules for every guest</h3>
+          <ul class="clean">
+            <li>Tell your therapist about every condition, medication, recent injury, surgery or pregnancy — every single visit.</li>
+            <li>Pain is a stop signal, not a target. "Good discomfort" is warm and broad; sharp, electric or nauseating is not.</li>
+            <li>No deep work over bruises, swelling, varicose veins, open skin or a numb area.</li>
+            <li>No strong abdominal work, no deep spinal manipulation, no forcing a joint.</li>
+            <li>Stop immediately if you feel dizzy, faint, short of breath, or have chest pain — and seek medical help.</li>
+            <li>Drink water afterwards. Warm oil and heat can drop your blood pressure, so rise slowly.</li>
+          </ul>
+        </div>
+        <div class="note" style="margin-top:18px">
+          <b>This app is wellness education, not healthcare.</b> Nothing here diagnoses, treats or cures any condition. Asian Blend Spa therapists are bodywork practitioners, not doctors. Always follow your own medical team's advice over anything in this plan.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <strong style="color:var(--jade)">Asian Blend Spa</strong><br />
+      Therapy &amp; Stretch Studio · Personalised Asian-inspired bodywork<br />
+      Serving South African, Asian and Indian guests — and everyone in between.
+    </div>
+    <div style="max-width:44ch">
+      Evidence sources are linked on each therapy card (PubMed / PMC / journal). Wellness guidance only — not medical advice.
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script>
+/* ============================================================
+   ASIAN BLEND SPA — personalisation engine
+   Pure client-side. Profile persisted in localStorage.
+   ============================================================ */
+
+/* ---------- cultural welcomes ---------- */
+const CULTURE = {
+  southafrican:{
+    label:'South African', hi:'Sawubona', plural:'Sanibonani',
+    meaning:'“I see you” — isiZulu', extra:'Welkom · Dumela · Molo · Hallo',
+    oils:'Marula & rooibos oil, buchu and Cape geranium',
+    tea:'Rooibos with honeybush and a slice of naartjie',
+    sound:'Marimba and low mbira tones',
+    heat:'Warm towels, moderate room heat'
+  },
+  asian:{
+    label:'Asian', hi:'Sawasdee', plural:'Yindee tonrap',
+    meaning:'“Welcome” — Thai', extra:'いらっしゃいませ · 你好 · Selamat datang',
+    oils:'Lemongrass and kaffir lime, plumeria, yuzu with green tea',
+    tea:'Jasmine green tea or hot lemongrass infusion',
+    sound:'Khim and rain-stick, low gamelan',
+    heat:'Herbal compress, warm room'
+  },
+  indian:{
+    label:'Indian', hi:'Namaste', plural:'Namaskar',
+    meaning:'“I bow to the light in you” — Sanskrit', extra:'स्वागतम् · Aap ka swagat hai',
+    oils:'Warm sesame (bala) oil with brahmi, sandalwood and vetiver',
+    tea:'Masala chai or tulsi-ginger infusion',
+    sound:'Tanpura drone and bansuri flute',
+    heat:'Warm oil and steam, medium room heat'
+  },
+  blended:{
+    label:'Blended', hi:'Welcome', plural:'Welcome',
+    meaning:'A blended welcome', extra:'Sawubona · Namaste · Sawasdee',
+    oils:'Warm sesame with lemongrass and a rooibos base',
+    tea:'Lemongrass, ginger and honeybush',
+    sound:'Soft flute with marimba',
+    heat:'Warm towels, gentle room heat'
+  }
+};
+
+/* ---------- age bands ---------- */
+const BANDS = [
+  {id:'16-24', min:16, max:24, label:'16–24 · Growing &amp; establishing',
+   hold:'20–25 seconds', sets:'2 rounds', intensity:'Full range, dynamic',
+   note:'Your tissue tolerates range easily, so the work is about control and habit, not caution. We still avoid deep neck traction and heavy spinal loading while you are still growing.',
+   pressure:'Medium to firm', extra:'We teach you the routine so you can repeat it at home between visits.'},
+  {id:'25-34', min:25, max:34, label:'25–34 · Building years',
+   hold:'25–30 seconds', sets:'2–3 rounds', intensity:'Moderate to full',
+   note:'This is peak loading decade — desk posture, gym, babies, long commutes. We balance release with strengthening so the stretch actually holds.',
+   pressure:'Medium to firm', extra:'Best results come from a 20-minute home routine 3 times a week.'},
+  {id:'35-44', min:35, max:44, label:'35–44 · Loaded &amp; busy',
+   hold:'30 seconds', sets:'2–3 rounds', intensity:'Moderate',
+   note:'Recovery slows a little here. We warm tissue properly before deepening, and we spend more time on hips, thoracic spine and shoulders.',
+   pressure:'Medium', extra:'Add a five-minute breath practice before your stretches; it measurably improves how far you move.'},
+  {id:'45-54', min:45, max:54, label:'45–54 · Changing physiology',
+   hold:'30–40 seconds', sets:'2–3 rounds', intensity:'Moderate, controlled',
+   note:'Hormonal shifts change tissue hydration, sleep and heat tolerance. We hold longer, move slower and never force end-range.',
+   pressure:'Medium, warm', extra:'Warmth first, stretch second. Cold tissue tears more easily than it lengthens.'},
+  {id:'55-64', min:55, max:64, label:'55–64 · Protecting range',
+   hold:'35–45 seconds', sets:'2 rounds', intensity:'Gentle to moderate',
+   note:'The goal is keeping what you have. Balance and joint support matter as much as length, so every stretch comes with a stability cue.',
+   pressure:'Medium to gentle', extra:'Use a chair, wall or cushion for support. Falling is the risk we care about most.'},
+  {id:'65-70', min:65, max:70, label:'65–70 · Supported &amp; gentle',
+   hold:'40–45 seconds', sets:'2 rounds', intensity:'Gentle, fully supported',
+   note:'All work is seated, side-lying or supported. No unsupported standing balance work, no strong end-range, no quick transitions. Hot stone and strong pressure are usually off the menu.',
+   pressure:'Gentle to medium', extra:'We check blood pressure, diabetes and bone density before any heat or deep work.'}
+];
+
+/* ---------- body shapes ---------- */
+const SHAPES = [
+  {id:'slender', name:'Slender', tag:'Ectomorph',
+   svg:'<svg viewBox="0 0 44 66"><circle cx="22" cy="9" r="6.5" fill="#2E6B5E"/><path d="M22 16 L22 40" stroke="#2E6B5E" stroke-width="5" stroke-linecap="round"/><path d="M22 21 L12 33 M22 21 L32 33" stroke="#2E6B5E" stroke-width="4" stroke-linecap="round"/><path d="M22 40 L15 61 M22 40 L29 61" stroke="#2E6B5E" stroke-width="5" stroke-linecap="round"/></svg>',
+   note:'Long levers and less natural cushioning. Joints reach range early, so we add stability work and never push past comfortable end-range.',
+   emphasis:['butterfly','hipflexor','cat'],
+   cue:'Use a folded towel under bony points (knees, sit bones, ribs).',
+   therapy:'More oil, less force. Your joints prefer broad pressure over sharp thumbs.'},
+  {id:'athletic', name:'Athletic', tag:'Mesomorph',
+   svg:'<svg viewBox="0 0 44 66"><circle cx="22" cy="9" r="6.5" fill="#2E6B5E"/><path d="M22 16 L22 40" stroke="#2E6B5E" stroke-width="7" stroke-linecap="round"/><path d="M22 21 L10 32 M22 21 L34 32" stroke="#2E6B5E" stroke-width="5.5" stroke-linecap="round"/><path d="M22 40 L14 61 M22 40 L30 61" stroke="#2E6B5E" stroke-width="6" stroke-linecap="round"/></svg>',
+   note:'Strong tissue that resists release. We need longer holds and firmer, broader work — and we must stretch the muscles you train most.',
+   emphasis:['hipflexor','fold','sidebody','calf'],
+   cue:'Breathe out into the stretch. Holding your breath is how strong people cheat a stretch.',
+   therapy:'Firm to strong pressure, longer holds, extra time on hip flexors and thoracic spine.'},
+  {id:'curvy', name:'Curvy', tag:'Hourglass / Pear',
+   svg:'<svg viewBox="0 0 44 66"><circle cx="22" cy="9" r="6.5" fill="#2E6B5E"/><path d="M22 16 Q15 27 22 40" stroke="#2E6B5E" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M22 21 L11 33 M22 21 L33 33" stroke="#2E6B5E" stroke-width="4.5" stroke-linecap="round"/><path d="M22 40 L15 61 M22 40 L29 61" stroke="#2E6B5E" stroke-width="6" stroke-linecap="round"/></svg>',
+   note:'A lower centre of gravity and a deeper lumbar curve. Hips, glutes and low back carry the load, so that is where we work — and where we protect.',
+   emphasis:['glute','butterfly','hipflexor','twist'],
+   cue:'Keep a small pillow under the head when lying down; the neck should not arch back.',
+   therapy:'Focus on glutes, hip rotators and low back. Avoid heavy direct abdominal pressure.'},
+  {id:'fuller', name:'Fuller', tag:'Plus-size',
+   svg:'<svg viewBox="0 0 44 66"><circle cx="22" cy="9" r="7" fill="#2E6B5E"/><path d="M22 16 Q11 28 22 42" stroke="#2E6B5E" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M22 22 L11 34 M22 22 L33 34" stroke="#2E6B5E" stroke-width="5" stroke-linecap="round"/><path d="M22 42 L16 61 M22 42 L28 61" stroke="#2E6B5E" stroke-width="6.5" stroke-linecap="round"/></svg>',
+   note:'Chest, hip and knee range is often limited by soft tissue rather than stiffness. We work in seated and side-lying positions, and we never lie you face-down without support.',
+   emphasis:['neck','cat','butterfly','glute'],
+   cue:'Ask for bolsters under the chest and ankles. Comfort first — a propped stretch beats a deep one.',
+   therapy:'Side-lying and seated work, extra pillow support, no long face-down positions, gentle on knees and ankles.'},
+  {id:'petite', name:'Petite', tag:'Small frame',
+   svg:'<svg viewBox="0 0 44 66"><circle cx="22" cy="11" r="6.5" fill="#2E6B5E"/><path d="M22 18 L22 40" stroke="#2E6B5E" stroke-width="5" stroke-linecap="round"/><path d="M22 23 L13 33 M22 23 L31 33" stroke="#2E6B5E" stroke-width="4" stroke-linecap="round"/><path d="M22 40 L16 61 M22 40 L28 61" stroke="#2E6B5E" stroke-width="5" stroke-linecap="round"/></svg>',
+   note:'Shorter levers mean smaller ranges do the same job. Pressure must be scaled down — a therapist leaning in at full body weight is far too much.',
+   emphasis:['neck','chest','glute','calf'],
+   cue:'Smaller is fine. Half the range with full breath beats a forced full range.',
+   therapy:'Scaled-down pressure, smaller strokes, cushions to shorten levers.'}
+];
+
+/* ---------- goals ---------- */
+const GOALS = {
+  pain:{label:'Ease back &amp; neck pain', tags:['pain','mobility']},
+  stress:{label:'Lower stress &amp; anxiety', tags:['stress','sleep']},
+  flex:{label:'Improve flexibility &amp; mobility', tags:['flexibility','mobility']},
+  sleep:{label:'Sleep better', tags:['sleep','stress']},
+  sport:{label:'Sports recovery', tags:['mobility','recovery','circulation']},
+  head:{label:'Headaches &amp; migraines', tags:['headache','stress']},
+  circ:{label:'Circulation &amp; swelling', tags:['circulation','lymph']},
+  relax:{label:'Simply switch off', tags:['relax','stress']},
+  posture:{label:'Desk-work posture', tags:['posture','mobility']},
+  hormonal:{label:'Hormonal &amp; life-stage wellbeing', tags:['hormonal','stress']}
+};
+
+/* ---------- conditions ---------- */
+const CONDITIONS = {
+  none:{label:'None of these', clear:true},
+  hbp:{label:'High blood pressure', advice:'Heat and long inversions can drop or spike blood pressure. We keep the room warm not hot, skip hot stone, avoid head-below-heart holds for long, and you rise slowly.', block:['hotstone'], soft:['fold']},
+  diabetes:{label:'Diabetes / neuropathy', advice:'Reduced sensation means burns and pressure damage can go unnoticed. Hot stone is not offered. Pressure is checked with you constantly, and we inspect the feet and legs.', block:['hotstone'], soft:['calf','glute']},
+  heart:{label:'Heart disease', advice:'Hot stone and extreme heat are contraindicated. We keep sessions shorter, seated or side-lying, and you keep your medication and phone within reach.', block:['hotstone'], soft:[]},
+  pregnancy:{label:'Pregnant', advice:'No deep abdominal work, no strong twists, no lying flat on the back after the first trimester, and specific ankle and lower-leg points are avoided. Only after your midwife or doctor clears it.', block:['hotstone'], soft:['fold','twist','glute']},
+  surgery:{label:'Recent surgery or injury', advice:'No work over or near the healing area until your surgeon clears it. We work around it, not through it.', block:[], soft:[]},
+  osteo:{label:'Osteoporosis / low bone density', advice:'No strong manipulation, no deep spinal pressure, no loaded flexion or forceful twisting. Gentle, broad, supported work only.', block:['thai'], soft:['fold','twist','cat']},
+  cancer:{label:'Cancer treatment', advice:'Hot stone is contraindicated. Only gentle, short sessions, and only with your oncology team\'s clearance. We avoid working over a tumour site or a port.', block:['hotstone','thai'], soft:[]},
+  fibro:{label:'Fibromyalgia', advice:'Shorter, gentler sessions with lighter pressure. Deep work typically flares you. We start at 30 minutes and build slowly.', block:['thai','hotstone'], soft:['fold','glute','hipflexor']},
+  disc:{label:'Disc problem / sciatica', advice:'No deep lumbar pressure, no strong twisting, no aggressive forward folds, and no hamstring stretching that pulls the nerve. We work the hips and thoracic spine instead.', block:['thai'], soft:['fold','twist','ham','cat']},
+  veins:{label:'Varicose veins / clot risk', advice:'No deep or directional pressure over the affected leg. We work above it and refer you on if a leg is hot, swollen or painful — that needs a doctor today, not a massage.', block:[], soft:['calf']},
+  skin:{label:'Skin conditions / allergies', advice:'We patch-test oil and avoid any area with broken, infected or inflamed skin. Tell us about nut oils — sesame, almond and marula are all used here.', block:[], soft:[]},
+  epilepsy:{label:'Epilepsy', advice:'Hot stone is used cautiously or not at all, and we avoid sudden strong stimuli. Keep the room quiet and the pace predictable.', block:[], soft:[]},
+  ptsd:{label:'Anxiety / PTSD / trauma', advice:'Consent is checked at every step. You keep your clothing choices, you may stop at any moment, and we avoid sudden or restraining holds.', block:[], soft:['neck']},
+  arthritis:{label:'Arthritis', advice:'Warmth helps, force does not. We move joints gently through their available range and never push into a blocked, grinding joint.', block:[], soft:['fold','butterfly','glute']},
+  asthma:{label:'Asthma / breathing condition', advice:'No long face-down positions, no heavy pressure on the upper back, and no strong scents. We keep your inhaler nearby.', block:['hotstone'], soft:['child']}
+};
+
+/* ---------- therapies ---------- */
+const THERAPIES = [
+  {id:'thai', name:'Traditional Thai Massage', origin:'Thailand — Nuad Boran', intensity:'strong',
+   tags:['pain','mobility','flexibility','recovery','posture'], cultures:['asian','indian','southafrican','blended'],
+   desc:'Assisted stretching and rhythmic palm-and-thumb compression along the body\'s sen lines, done fully clothed on a floor mat.',
+   benefits:['May reduce short-term low-back pain and improve day-to-day function','Can increase comfortable range of movement in hips and spine','Often leaves guests feeling looser and more awake than a standard oil massage'],
+   ev:'Moderate', evLabel:'Randomised trials in chronic low back pain found short-term reductions in pain and disability, roughly equal to joint mobilisation.',
+   src:'Juntakarn et al., Int. J. Therapeutic Massage &amp; Bodywork, 2017', url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC5495387/',
+   avoid:['pregnancy','osteo','cancer','fibro','disc'],
+   avoidWhy:'Assisted stretching and strong compression are too much for this condition.',
+   tip:'Wear loose, comfortable clothing with long sleeves.'},
+  {id:'shiatsu', name:'Shiatsu', origin:'Japan — 指圧', intensity:'medium',
+   tags:['stress','sleep','headache','pain','relax','hormonal'], cultures:['asian','indian','southafrican','blended'],
+   desc:'Sustained thumb, palm, elbow and knee pressure on meridians, with slow rocking, on a futon or mat.',
+   benefits:['May improve tension, stress and structural complaints','Guests commonly report better sleep and a calmer nervous system','Can be adapted to seated work if lying down is uncomfortable'],
+   ev:'Moderate', evLabel:'A systematic review of shiatsu trials found significant symptom improvement, strongest for tension or stress and structural problems (effect sizes 0.66–0.77).',
+   src:'Robinson et al., BMC Complementary &amp; Alternative Medicine, 2011', url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC3200172/',
+   avoid:[], avoidWhy:'', tip:'Good choice if you dislike oil on your skin.'},
+  {id:'tuina', name:'Tui Na', origin:'China — 推拿', intensity:'medium',
+   tags:['pain','posture','mobility','headache'], cultures:['asian','indian','southafrican','blended'],
+   desc:'Chinese therapeutic massage using rolling, kneading, pressing and joint mobilisation, focused on a specific complaint rather than the whole body.',
+   benefits:['May reduce pain and improve function in musculoskeletal problems','Often used alongside physiotherapy for neck, shoulder and low-back complaints','Targeted: usually 20–30 focused minutes rather than a full-body hour'],
+   ev:'Moderate', evLabel:'Reviews report pain and function improvements in musculoskeletal conditions, though a 2014 systematic review noted a shortage of high-quality trials.',
+   src:'Yang et al., Trials, 2014 (review)', url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC4228121/',
+   avoid:['pregnancy'], avoidWhy:'Strong specific-point work needs a practitioner trained in pregnancy care.',
+   tip:'Tell the therapist your single worst spot — Tui Na works best with a target.'},
+  {id:'abhyanga', name:'Abhyanga Warm-Oil Massage', origin:'India — Ayurveda', intensity:'medium',
+   tags:['stress','sleep','relax','hormonal','lymph','circulation'], cultures:['indian','asian','southafrican','blended'],
+   desc:'Generous warm herbal oil applied with long rhythmic strokes, traditionally followed by steam and rest.',
+   benefits:['A pilot study found it promising for reducing subjective stress and lowering heart rate','A daily-massage study reported lower stress, better sleep quality and improved quality of life','Guests often report softer skin and a deep, slow calm'],
+   ev:'Moderate', evLabel:'Small pilot studies and a daily-massage study support stress, sleep and quality-of-life benefits; larger trials are still needed.',
+   src:'Basler et al., Complementary Therapies in Medicine, 2011', url:'https://pubmed.ncbi.nlm.nih.gov/21568717/',
+   avoid:[], avoidWhy:'', tip:'You will be oily — allow 20 minutes before you dress or drive.'},
+  {id:'reflexology', name:'Foot Reflexology', origin:'China / Egypt lineage', intensity:'light',
+   tags:['stress','sleep','circ', 'relax','headache'], cultures:['asian','indian','southafrican','blended'],
+   desc:'Precise thumb-and-finger pressure on mapped zones of the feet and lower legs.',
+   benefits:['Guests very often report deep relaxation and easier sleep','Meta-analysis found benefits for fatigue, sleep and pain','Cancer-care reviews found it better than no treatment for pain, quality of life and fatigue'],
+   ev:'Mixed', evLabel:'Evidence is genuinely divided. A 2011 meta-analysis found effects on fatigue, sleep and pain, but a 2008 systematic review found no specific effect beyond urinary symptoms in MS. Treat the relaxation as real and the zone-mapping claims as unproven.',
+   src:'Lee et al., J. Korean Academy of Nursing, 2011 (meta-analysis)', url:'https://synapse.koreamed.org/articles/1002770',
+   avoid:[], avoidWhy:'', tip:'Tell us about corns, fungal infection or recent foot surgery.'},
+  {id:'hotstone', name:'Hot Stone Therapy', origin:'Blended Asian spa', intensity:'light',
+   tags:['relax','stress','pain','circulation'], cultures:['asian','southafrican','blended'],
+   desc:'Heated basalt stones placed on the body and used as massage tools to warm and soften tissue.',
+   benefits:['Warmth helps muscles relax and can ease the sensation of stiffness','Many guests find it the most deeply relaxing treatment on the menu','Heat can feel soothing for chronic muscular tightness'],
+   ev:'Emerging', evLabel:'Little high-quality research exists. The relaxation benefit is plausible and widely reported, but it is not a treatment for any condition.',
+   src:'AMTA, Massage Therapy Journal — hot stone contraindications', url:'https://www.amtamassage.org/publications/massage-therapy-journal/hot-stone-massage/',
+   avoid:['hbp','diabetes','heart','pregnancy','cancer','fibro','asthma','epilepsy'],
+   avoidWhy:'Heat plus reduced sensation or cardiovascular load makes burns and blood-pressure shifts a real risk.',
+   tip:'Say the word if a stone is too warm — never endure it.'},
+  {id:'head', name:'Indian Head Massage (Champi)', origin:'India — 7,000-year lineage', intensity:'light',
+   tags:['headache','stress','sleep','relax','posture'], cultures:['indian','asian','southafrican','blended'],
+   desc:'Warm oil worked through the scalp, temples, neck and shoulders, seated, no need to undress.',
+   benefits:['Commonly reported to ease head, neck and shoulder tension','Often described as one of the fastest routes to mental quiet','Convenient: seated, clothed, and easy to fit into a working day'],
+   ev:'Emerging', evLabel:'Mostly small trials and strong traditional use. Pressure techniques for anxiety have meta-analytic support (Chen et al., 2022), but head massage itself is under-researched.',
+   src:'Chen et al., J. Integrative &amp; Complementary Medicine, 2022 (acupressure &amp; anxiety meta-analysis)', url:'https://journals.sagepub.com/doi/abs/10.1089/jicm.2020.0256',
+   avoid:[], avoidWhy:'', tip:'Ask for a patch test if you have a sensitive scalp or nut allergy.'},
+  {id:'herbal', name:'Thai Herbal Compress (Luk Pra Kob)', origin:'Thailand', intensity:'medium',
+   tags:['pain','mobility','circulation','recovery','relax'], cultures:['asian','indian','blended'],
+   desc:'Warm cloth bundles of lemongrass, ginger, turmeric and camphor pressed and rolled over the body.',
+   benefits:['A randomised trial in older adults with low back pain found it effective','Warmth and aromatic oils may ease stiffness and improve comfort','Often paired with Thai massage for the first half of a session'],
+   ev:'Moderate', evLabel:'An RCT in elderly patients with low back pain found the herbal compress effective for pain relief.',
+   src:'Laosee et al., Complementary Therapies in Medicine, 2020', url:'https://pubmed.ncbi.nlm.nih.gov/31987237/',
+   avoid:['skin','hbp'], avoidWhy:'Aromatic heat can irritate skin or raise blood pressure in some guests.',
+   tip:'Camphor is strong — tell us if you react to strong scents.'},
+  {id:'swedish', name:'Aromatherapy &amp; Swedish Blend', origin:'Europe meets Asia', intensity:'medium',
+   tags:['relax','stress','sleep','lymph','circulation','recovery'], cultures:['southafrican','blended','asian','indian'],
+   desc:'Long flowing oil strokes and kneading — the familiar baseline, blended with Asian oils and rhythm.',
+   benefits:['A large meta-analysis found massage beneficial for anxiety, pain and mood','May reduce cortisol and support a calmer stress response','Easiest first step if you have never had bodywork before'],
+   ev:'Strong', evLabel:'Multiple meta-analyses of randomised trials support benefits for pain, anxiety and mood in a range of populations.',
+   src:'Crawford et al., Pain Medicine, 2016 (meta-analysis, massage &amp; function in pain)', url:'https://academic.oup.com/painmedicine/article-abstract/17/7/1353/2223191',
+   avoid:[], avoidWhy:'', tip:'Tell us your scent dislikes — we blend to you, not to a default.'}
+];
+
+/* ---------- stretches ---------- */
+const S = {
+  neck:'<circle cx="108" cy="52" r="15" fill="#1F4B43" stroke="none"/><path d="M103 66 L100 118"/><path d="M100 82 L82 112"/><path d="M101 80 L122 60 L112 40"/><path d="M100 118 L74 138 L74 162"/><path d="M100 118 L126 138 L126 162"/>',
+  chest:'<circle cx="100" cy="44" r="15" fill="#1F4B43" stroke="none"/><path d="M100 59 L100 118"/><path d="M100 74 L72 94 L64 116"/><path d="M100 74 L128 94 L136 116"/><path d="M100 118 L88 160"/><path d="M100 118 L112 160"/>',
+  twist:'<circle cx="104" cy="54" r="15" fill="#1F4B43" stroke="none"/><path d="M104 69 L100 120"/><path d="M100 84 L124 96 L134 80"/><path d="M100 84 L76 98 L68 116"/><path d="M100 120 L130 134 L130 160"/><path d="M100 120 L76 142 L100 160"/>',
+  cat:'<circle cx="60" cy="74" r="14" fill="#1F4B43" stroke="none"/><path d="M62 88 Q104 64 148 104"/><path d="M64 90 L58 152"/><path d="M148 104 L152 152"/><path d="M148 104 L172 118"/>',
+  child:'<circle cx="62" cy="124" r="13" fill="#1F4B43" stroke="none"/><path d="M74 130 Q110 138 146 140"/><path d="M146 140 L154 152 L132 154"/><path d="M78 126 L48 148"/>',
+  fold:'<circle cx="78" cy="126" r="14" fill="#1F4B43" stroke="none"/><path d="M92 118 L112 96"/><path d="M92 118 L84 152"/><path d="M112 96 L108 158"/><path d="M112 96 L118 158"/>',
+  ham:'<circle cx="66" cy="112" r="14" fill="#1F4B43" stroke="none"/><path d="M80 116 L122 124"/><path d="M122 124 L172 148"/><path d="M122 124 L106 152 L146 156"/><path d="M84 118 L120 146"/>',
+  hipflexor:'<circle cx="100" cy="44" r="14" fill="#1F4B43" stroke="none"/><path d="M100 58 L102 112"/><path d="M100 74 L82 96 L76 118"/><path d="M100 74 L120 96 L124 120"/><path d="M102 112 L80 132 L80 160"/><path d="M102 112 L134 140 L162 158"/>',
+  glute:'<circle cx="54" cy="148" r="14" fill="#1F4B43" stroke="none"/><path d="M68 148 L120 148"/><path d="M120 148 L142 116 L148 148"/><path d="M78 144 L118 126"/><path d="M148 148 L160 148"/>',
+  calf:'<circle cx="84" cy="48" r="14" fill="#1F4B43" stroke="none"/><path d="M84 62 L86 118"/><path d="M86 78 L118 92 L128 90"/><path d="M86 118 L72 160"/><path d="M86 118 L120 142 L154 160"/><path d="M158 26 L158 164"/>',
+  cobra:'<circle cx="58" cy="96" r="14" fill="#1F4B43" stroke="none"/><path d="M58 110 Q82 100 104 116"/><path d="M104 116 L170 146"/><path d="M68 112 L62 154"/>',
+  sidebody:'<circle cx="114" cy="46" r="14" fill="#1F4B43" stroke="none"/><path d="M114 60 Q106 90 98 120"/><path d="M112 70 L92 58 L80 66"/><path d="M112 72 L134 96 L136 118"/><path d="M98 120 L96 160"/><path d="M98 120 L104 160"/>',
+  butterfly:'<circle cx="100" cy="56" r="14" fill="#1F4B43" stroke="none"/><path d="M100 70 L100 116"/><path d="M100 86 L80 108"/><path d="M100 86 L120 108"/><path d="M100 116 L74 134 L96 146"/><path d="M100 116 L126 134 L104 146"/>',
+  wrist:'<circle cx="78" cy="52" r="14" fill="#1F4B43" stroke="none"/><path d="M78 66 L78 118"/><path d="M78 82 L112 76 L122 94"/><path d="M78 118 L78 160"/>'
+};
+
+const STRETCHES = [
+ {id:'neck', name:'Neck Release — Side &amp; Diagonal', area:'Neck · upper trapezius · levator scapulae',
+  art:S.neck, sets:2, hold:20,
+  why:'Releases the tension that builds from phone and desk posture — the most common complaint we see across every age band.',
+  how:'Sit tall. Drop the right ear toward the right shoulder, then turn the nose slightly down toward the armpit to catch the diagonal fibres. Repeat on the other side.',
+  cue:'Gentle stretch only. Never pull the head with your hand, and stop immediately if you feel dizziness, tingling or any shooting pain down the arm.',
+  avoid:{disc:'Cervical traction and end-range neck work are unsafe with a disc problem or sciatica. Keep it to a small, pain-free range only.'}},
+ {id:'chest', name:'Standing Chest &amp; Shoulder Opener', area:'Chest · front of shoulders · biceps',
+  art:S.chest, sets:2, hold:25,
+  why:'Undoes the rounded-shoulder position that shortens the chest and drives neck and shoulder pain.',
+  how:'Stand tall, clasp your hands behind your back, straighten the arms and lift them slightly. Open the chest and breathe into the ribs.',
+  cue:'Keep the ribs down and the lower back neutral — do not arch the lower back to get more range.',
+  avoid:{osteo:'Avoid loaded end-range extension if you have low bone density. Reduce the lift to a small comfortable opening.'}},
+ {id:'cat', name:'Cat–Cow Spinal Flow', area:'Whole spine · deep back muscles · abdominal wall',
+  art:S.cat, sets:2, hold:15,
+  why:'Moves every segment of the spine through flexion and extension and is the safest way to warm the back before deeper work.',
+  how:'On hands and knees, exhale and round the spine up (cat), then inhale and let it sag gently (cow). Move slowly with the breath.',
+  cue:'Keep the neck long — look between the hands rather than craning up. Stop if the wrists hurt; use fists or forearms instead.',
+  avoid:{pregnancy:'After the first trimester, do this seated on a chair instead of on hands and knees.',veins:'Use a chair version to avoid pressure on the hands and knees.'}},
+ {id:'twist', name:'Seated Spinal Twist', area:'Thoracic spine · obliques · hip rotators',
+  art:S.twist, sets:2, hold:25,
+  why:'Restores rotation to a stiff mid-back, which is what actually limits reaching and turning for most guests.',
+  how:'Sit tall, cross one leg over, place the opposite elbow outside the knee and rotate slowly. Look over the shoulder at the end.',
+  cue:'Rotate from the ribs, not the lower back. Exhale as you turn and stop before you feel any pinch.',
+  avoid:{pregnancy:'Avoid strong twists while pregnant — reduce to a gentle rib-only rotation.',disc:'No strong twisting with a disc problem. Keep the rotation to a small, comfortable range.',osteo:'No forceful rotation with low bone density. Gentle, ribs only.'}},
+ {id:'sidebody', name:'Standing Side-Body Stretch', area:'Lats · ribs · quadratus lumborum',
+  art:S.sidebody, sets:2, hold:25,
+  why:'Opens the side of the ribcage, which improves breathing depth and takes load off the lower back.',
+  how:'Stand with feet hip-width. Reach one arm overhead and lean away from it, keeping the hips still and the chest facing forward.',
+  cue:'Do not let the hips shift sideways — the stretch should be in the ribs and side, not the lower back.',
+  avoid:{hbp:'Avoid long overhead holds if your blood pressure is uncontrolled. Keep the arm at shoulder height.'}},
+ {id:'hipflexor', name:'Kneeling Hip-Flexor Lunge', area:'Hip flexors · psoas · quadriceps',
+  art:S.hipflexor, sets:2, hold:30,
+  why:'The single highest-value stretch for anyone who sits. Tight hip flexors tilt the pelvis and load the lower back.',
+  how:'Kneel on one knee with a cushion under it. Tuck the pelvis under, then shift gently forward until you feel the front of the hip open.',
+  cue:'Protect the kneeling knee with a cushion. Stop if you feel pinching at the front of the hip — reduce the forward shift.',
+  avoid:{surgery:'Skip if you have had recent knee, hip or abdominal surgery until cleared.',fuller:'Use a chair-supported version and a thick cushion under the knee.'}},
+ {id:'ham', name:'Seated Hamstring Stretch', area:'Hamstrings · calves · lower back',
+  art:S.ham, sets:2, hold:30,
+  why:'Restores the length that lets you hinge at the hips instead of rounding your back every time you bend.',
+  how:'Sit with one leg extended and the other bent in. Hinge forward from the hip with a long spine, chest leading.',
+  cue:'Hinge from the hip — do not round the lower back to reach. Stop if you feel a nerve-like pull down the leg.',
+  avoid:{disc:'Do not stretch the hamstring if it pulls on the nerve with a disc problem. Keep the knee slightly bent and stay upright.'}},
+ {id:'glute', name:'Supine Knee-to-Chest &amp; Figure-4', area:'Glutes · piriformis · lower back',
+  art:S.glute, sets:2, hold:30,
+  why:'Releases the deep hip muscles that refer pain into the buttock and down the leg — the most common pattern we treat.',
+  how:'Lie on your back. Hug one knee to the chest, then cross the ankle over the opposite knee and pull the supporting thigh toward you.',
+  cue:'Keep the head supported. Stop if you feel pins and needles or a sharp electric sensation — that is a nerve, not a muscle.',
+  avoid:{pregnancy:'Use a side-lying version with pillows rather than lying on your back.',fuller:'Ask for a bolster under the hips and a pillow under the head.'}},
+ {id:'butterfly', name:'Seated Butterfly', area:'Inner thighs · adductors · hip rotators',
+  art:S.butterfly, sets:2, hold:30,
+  why:'Keeps the hips able to open and close comfortably, which protects the knees and lower back in daily movement.',
+  how:'Sit with the soles of the feet together and the knees relaxed out. Sit tall and hinge forward only as far as the hips allow.',
+  cue:'Never press the knees down with your hands or elbows. Let gravity do the work, and put cushions under the thighs if needed.',
+  avoid:{osteo:'Avoid pushing the knees down with low bone density. Let the legs rest where they fall.'}},
+ {id:'fold', name:'Standing Forward Fold (Supported)', area:'Spine · hamstrings · calves',
+  art:S.fold, sets:2, hold:25,
+  why:'Decompresses the whole back and calms the nervous system — a good closing move for a stressful day.',
+  how:'Stand with soft knees and hinge forward, letting the head hang. Rest your hands on a chair seat or your shins.',
+  cue:'Soft knees, always. Skip or shorten this if you have high blood pressure, glaucoma or dizziness — the head is below the heart.',
+  avoid:{hbp:'Head-below-heart positions can affect blood pressure. Do the seated version instead.',osteo:'Avoid loaded forward folding with low bone density. Do a seated hip hinge.',disc:'Deep forward folding can aggravate a disc. Keep the spine long and stop well before end-range.'}},
+ {id:'calf', name:'Wall Calf &amp; Ankle Stretch', area:'Calves · Achilles · ankles',
+  art:S.calf, sets:2, hold:30,
+  why:'Keeps the ankles mobile so your knees and hips do not have to compensate when you walk and climb.',
+  how:'Place both hands on a wall, step one foot back with the heel down and the leg straight, and lean in until you feel the calf open.',
+  cue:'Keep the back heel down and the back foot pointing straight ahead. Stop if the calf is hot, swollen or painful — that needs a doctor.',
+  avoid:{veins:'No deep stretching over varicose veins. Gentle range only, and no downward pressure on the calf.',diabetes:'Check your feet before and after; reduced sensation means you may not feel a strain.'}},
+ {id:'cobra', name:'Supported Cobra Back Extension', area:'Front of spine · abdominals · chest',
+  art:S.cobra, sets:2, hold:20,
+  why:'Balances all the forward bending of daily life and gently loads the spine in the safe direction.',
+  how:'Lie face down, hands under the shoulders, and press up only as far as is comfortable, keeping the hips on the floor.',
+  cue:'Keep the neck long and the shoulders away from the ears. Do not force the lower back into a deep arch.',
+  avoid:{pregnancy:'Avoid lying face down while pregnant.',osteo:'Avoid spinal extension with low bone density. Do a standing chest opener instead.'}},
+ {id:'wrist', name:'Wrist &amp; Forearm Stretch', area:'Wrists · forearms · elbows',
+  art:S.wrist, sets:2, hold:20,
+  why:'Essential for anyone typing, cooking, driving or carrying — and often skipped, which is why wrists ache.',
+  how:'Extend one arm with the palm up, use the other hand to draw the fingers down and back gently. Then flip the palm down and repeat.',
+  cue:'Keep it gentle and stop at the first resistance. Never bounce, and stop if you feel tingling in the fingers.'
+ }
+];
+
+/* ============================================================
+   ENGINE
+   ============================================================ */
+function bandFor(age){ return BANDS.find(b=>age>=b.min&&age<=b.max) || BANDS[1]; }
+function shapeFor(id){ return SHAPES.find(s=>s.id===id) || SHAPES[2]; }
+function cultureFor(id){ return CULTURE[id] || CULTURE.blended; }
+
+function collect(){
+  const p = {
+    name:(document.getElementById('name').value||'').trim(),
+    age:parseInt(document.getElementById('ageRange').value,10),
+    sex:(document.querySelector('input[name=sex]:checked')||{}).value || 'unspecified',
+    culture:(document.querySelector('input[name=culture]:checked')||{}).value || 'blended',
+    pressure:(document.querySelector('input[name=pressure]:checked')||{}).value || 'therapist',
+    exp:(document.querySelector('input[name=exp]:checked')||{}).value || 'some',
+    body:document.querySelector('.shape.on') ? document.querySelector('.shape.on').dataset.v : 'curvy',
+    goals:[...document.querySelectorAll('#goalPicks input:checked')].map(i=>i.value),
+    conditions:[...document.querySelectorAll('#condPicks input:checked')].map(i=>i.value).filter(c=>c!=='none')
+  };
+  if(!p.goals.length) p.goals=['relax'];
+  return p;
+}
+
+function goalTags(p){ const t=new Set(); p.goals.forEach(g=>{(GOALS[g]||{tags:[]}).tags.forEach(x=>t.add(x))}); return t; }
+
+function rankTherapies(p){
+  const tags = goalTags(p);
+  return THERAPIES.map(t=>{
+    let score = 0;
+    t.tags.forEach(g=>{ if(tags.has(g)) score += 12; });
+    if(t.cultures.includes(p.culture)) score += 5;
+    if(p.exp==='first'){ if(t.intensity==='strong') score -= 6; else if(t.intensity==='light') score += 4; }
+    if(p.exp==='regular' && t.intensity!=='light') score += 3;
+    if(p.age>=60){ if(t.intensity==='strong') score -= 5; if(t.intensity==='light') score += 4; }
+    if(p.age<=24){ if(t.intensity==='strong') score += 3; }
+    if(p.pressure==='light'){ if(t.intensity==='strong') score -= 5; if(t.intensity==='light') score += 4; }
+    if(p.pressure==='firm' && t.intensity!=='light') score += 4;
+    if(p.body==='fuller' && t.id==='hotstone') score -= 4;
+    if(p.body==='petite' && t.intensity==='strong') score -= 3;
+    const blocked = p.conditions.filter(c => t.avoid.includes(c));
+    if(blocked.length) score -= 60;
+    return {t, score, blocked};
+  }).sort((a,b)=>b.score-a.score);
+}
+
+function buildStretches(p, band){
+  const soft = new Set();
+  p.conditions.forEach(c => (CONDITIONS[c] && CONDITIONS[c].soft ? CONDITIONS[c].soft : []).forEach(x=>soft.add(x)));
+  const emphasis = shapeFor(p.body).emphasis;
+  const list = STRETCHES.map((s,i)=>{
+    let score = 0;
+    if(emphasis.includes(s.id)) score += 20;
+    if(['neck','cat','sidebody'].includes(s.id)) score += 10;          // warm-up always first
+    if(s.id==='child'||s.id==='fold') score += 6;                       // cool-down
+    if(p.sex==='female' && ['glute','butterfly','hipflexor'].includes(s.id)) score += 6;
+    if(p.sex==='male' && ['hipflexor','chest','sidebody'].includes(s.id)) score += 6;
+    if(p.age>=55 && ['cat','chest','neck','calf','wrist'].includes(s.id)) score += 8;
+    if(p.age<=24 && ['cobra','fold','ham'].includes(s.id)) score += 6;
+    const flagged = p.conditions.filter(c => s.avoid && s.avoid[c]);
+    if(flagged.length) score -= 25;
+    return {s, score, flagged, order:i};
+  }).sort((a,b)=>b.score-a.score).slice(0,8);
+  // re-order: warm-ups first, then main, then cool-down
+  const warm = ['neck','chest','cat','wrist','sidebody'];
+  const cool = ['child','fold','butterfly','cobra'];
+  return list.sort((a,b)=>{
+    const ra = warm.includes(a.s.id)?0:(cool.includes(a.s.id)?2:1);
+    const rb = warm.includes(b.s.id)?0:(cool.includes(b.s.id)?2:1);
+    if(ra!==rb) return ra-rb;
+    return b.score-a.score;
+  });
+}
+
+function dose(p, band, s){
+  const holdMod = band.id==='65-70'?12 : band.id==='55-64'?8 : band.id==='45-54'?4 : band.id==='16-24'?-3 : 0;
+  let hold = s.hold + holdMod;
+  let sets = s.sets;
+  if(band.id==='65-70') sets = 2;
+  if(band.id==='16-24'||band.id==='25-34') sets = Math.max(sets, 2);
+  if(p.conditions.includes('fibro')||p.conditions.includes('cancer')) { sets = 2; hold = Math.min(hold, 25); }
+  return {hold, sets};
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function poseSVG(inner){
+  return '<svg class="pose" viewBox="0 0 200 190" role="img" aria-hidden="true">'+
+    '<rect width="200" height="190" rx="16" fill="#FBF7F0"/>'+
+    '<ellipse cx="100" cy="168" rx="64" ry="8" fill="#EAD9CD" opacity=".75"/>'+
+    '<g fill="none" stroke="#2E6B5E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">'+inner+'</g>'+
+    '</svg>';
+}
+
+function evClass(label){
+  return label==='Strong'?'r-strong':label==='Moderate'?'r-mod':label==='Emerging'?'r-emerg':'r-mixed';
+}
+
+function renderLibrary(){
+  document.getElementById('libraryGrid').innerHTML = THERAPIES.map(t=>
+    '<div class="card ther-card">'+
+      '<div class="ther-top">'+
+        '<div><div class="origin">'+t.origin+'</div><h3>'+t.name+'</h3></div>'+
+        '<span class="ribbon '+evClass(t.ev)+'">'+t.ev+' evidence</span>'+
+      '</div>'+
+      '<p class="tagline">'+t.desc+'</p>'+
+      '<ul class="clean">'+t.benefits.map(b=>'<li>'+b+'</li>').join('')+'</ul>'+
+      '<div class="evidence"><b>Research:</b> '+t.evLabel+' <a href="'+t.url+'" target="_blank" rel="noopener">'+t.src+'</a></div>'+
+      (t.avoid.length? '<div class="note tiny"><b>Not for:</b> '+t.avoid.map(a=>CONDITIONS[a]?CONDITIONS[a].label:a).join(' · ')+'</div>':'')+
+    '</div>').join('');
+}
+
+function renderSafety(){
+  document.getElementById('safetyList').innerHTML = Object.keys(CONDITIONS).filter(k=>k!=='none').map(k=>
+    '<li><b style="color:var(--jade)">'+CONDITIONS[k].label+':</b> '+CONDITIONS[k].advice+'</li>').join('');
+}
+
+function renderResults(p){
+  const band = bandFor(p.age);
+  const shape = shapeFor(p.body);
+  const cul = cultureFor(p.culture);
+  const ranked = rankTherapies(p);
+  const top = ranked.filter(r=>!r.blocked.length).slice(0,4);
+  const blockedList = ranked.filter(r=>r.blocked.length);
+  const plan = buildStretches(p, band);
+  const goalText = p.goals.map(g=>GOALS[g]?GOALS[g].label:g).join(' · ');
+  const sexLine = p.sex==='female'
+    ? 'As a female guest we also keep hormonal life-stage in mind: cycle timing, pregnancy, perimenopause and post-menopause all change how tissue responds to heat, pressure and length. Tell your therapist where you are — it changes the plan.'
+    : p.sex==='male'
+    ? 'As a male guest we pay particular attention to hip flexors, chest, shoulders and the lower back, which is where men typically lose range first — and we screen for blood pressure and heart history before heat or deep work.'
+    : 'We will confirm your preferences in person, and pressure, positioning and clothing choices are always yours to set.';
+  const condNotes = p.conditions.length ? p.conditions : [];
+  const clearance = condNotes.filter(c=>['heart','cancer','pregnancy','osteo','disc','hbp','epilepsy','diabetes'].includes(c));
+
+  const narrative =
+    'You are '+p.age+' years old, with a '+shape.name.toLowerCase()+' build ('+shape.tag.toLowerCase()+'), and today you are asking for '+
+    goalText.toLowerCase()+'. That puts you in our '+band.label.replace(/&amp;/g,'&')+' band, so we work at '+band.intensity.toLowerCase()+
+    ' with '+band.hold+' holds and '+band.sets+' per movement. '+shape.note+' '+band.note;
+
+  let html = '';
+  html += '<div class="banner">'+
+    '<svg class="lotus" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 20c20 26 20 52 0 78-20-26-20-52 0-78z" fill="#fff"/><path d="M30 60c34-6 60 8 72 38-34 6-60-8-72-38z" fill="#fff"/><path d="M170 60c-34-6-60 8-72 38 34 6 60-8 72-38z" fill="#fff"/><path d="M40 130c34-20 66-20 100 0-34 20-66 20-100 0z" fill="#fff"/></svg>'+
+    '<div class="greet">'+cul.hi+' · '+cul.meaning+'</div>'+
+    '<h2>'+(p.name? p.name+', here is your personal plan' : 'Here is your personal plan')+'</h2>'+
+    '<p>'+narrative+'</p>'+
+    '<div class="chips">'+
+      '<span class="chip">'+p.age+' years · '+band.label.replace(/&amp;/g,'&')+'</span>'+
+      '<span class="chip">'+shape.name+' build</span>'+
+      '<span class="chip">'+cul.label+' welcome</span>'+
+      '<span class="chip">'+p.goals.length+' goal'+(p.goals.length>1?'s':'')+'</span>'+
+      (p.conditions.length? '<span class="chip">'+p.conditions.length+' health note'+(p.conditions.length>1?'s':'')+'</span>' : '<span class="chip">No health flags</span>')+
+    '</div></div>';
+
+  html += '<div class="grid g2" style="margin-top:22px">'+
+    '<div class="card"><h3>Your goals</h3><ul class="clean">'+p.goals.map(g=>'<li>'+GOALS[g].label+'</li>').join('')+'</ul></div>'+
+    '<div class="card"><h3>How your body shape changes the plan</h3><p class="small" style="margin-bottom:8px">'+shape.note+'</p>'+
+      '<div class="note tiny"><b>Stretch cue:</b> '+shape.cue+'</div>'+
+      '<div class="note tiny" style="margin-top:8px"><b>Therapy note:</b> '+shape.therapy+'</div></div>'+
+    '</div>';
+
+  html += '<div class="grid g2" style="margin-top:18px">'+
+    '<div class="card"><h3>Your '+band.id+' band in practice</h3>'+
+      '<div class="dose"><span>'+band.hold+' holds</span><span>'+band.sets+'</span><span>'+band.intensity+'</span></div>'+
+      '<p class="small" style="margin:0">'+band.extra+'</p></div>'+
+    '<div class="card"><h3>Sex-specific notes</h3><p class="small" style="margin:0">'+sexLine+'</p></div>'+
+    '</div>';
+
+  /* therapies */
+  html += '<div class="sec-head" style="margin-top:40px"><div class="eyebrow">Step two</div><h2>Your recommended therapies</h2>'+
+    '<p>Ranked for your goals, your body and your cultural preference. Evidence is rated honestly — we would rather you trust four claims than doubt ten.</p></div>';
+  html += '<div class="grid g2">'+ top.map(r=>{
+    const t=r.t;
+    return '<div class="card ther-card">'+
+      '<div class="ther-top">'+
+        '<div><div class="origin">'+t.origin+'</div><h3>'+t.name+'</h3></div>'+
+        '<div class="scorebox"><div class="score">'+Math.min(99,Math.max(40,r.score+40))+'</div><i>match</i></div>'+
+      '</div>'+
+      '<span class="ribbon '+evClass(t.ev)+'">'+t.ev+' evidence</span>'+
+      '<p class="tagline">'+t.desc+'</p>'+
+      '<ul class="clean">'+t.benefits.map(b=>'<li>'+b+'</li>').join('')+'</ul>'+
+      '<div class="why"><b>Why this for you:</b> '+
+        (p.goals.filter(g=>GOALS[g].tags.some(x=>t.tags.includes(x))).length
+          ? 'it directly targets your goal of '+p.goals.filter(g=>GOALS[g].tags.some(x=>t.tags.includes(x))).map(g=>GOALS[g].label.toLowerCase()).join(' and ')+'. '
+          : 'it is a strong general match for your profile. ')+
+        (t.cultures.includes(p.culture)? 'It also sits naturally with your '+cul.label.toLowerCase()+' preference for '+cul.oils.split(',')[0]+'. ':'')+
+        t.tip+'</div>'+
+      '<div class="evidence"><b>Research:</b> '+t.evLabel+' <a href="'+t.url+'" target="_blank" rel="noopener">'+t.src+'</a></div>'+
+      '<div class="dose"><span>'+t.intensity+' pressure</span><span>'+t.tip.split('.')[0]+'</span></div>'+
+    '</div>';
+  }).join('') + '</div>';
+
+  if(blockedList.length){
+    html += '<div class="sec-head" style="margin-top:36px"><h3 style="color:var(--stop)">Not for you right now</h3>'+
+      '<p class="small">These are normally excellent treatments, but your health notes make them unsafe today. This is not a sales decision — it is a safety one.</p></div>';
+    html += '<div class="grid g2">'+ blockedList.map(r=>
+      '<div class="card ther-card blocked">'+
+        '<div class="ther-top"><div><div class="origin">'+r.t.origin+'</div><h3>'+r.t.name+'</h3></div><span class="ribbon r-stop">Blocked</span></div>'+
+        '<div class="why" style="background:#F7DFDB"><b>Reason:</b> '+r.t.avoidWhy+' Flagged by: '+r.blocked.map(c=>CONDITIONS[c].label).join(', ')+'.</div>'+
+        '<p class="small muted" style="margin:0">'+CONDITIONS[r.blocked[0]].advice+'</p>'+
+      '</div>').join('') + '</div>';
+  }
+
+  /* stretch plan */
+  html += '<div class="sec-head" style="margin-top:40px"><div class="eyebrow">Step three</div><h2>Your stretch routine — '+plan.length+' movements</h2>'+
+    '<p>Sequenced warm-up → main work → cool-down for a '+band.id+' body. Hold times and rounds are already adjusted for your age band, your shape and your health notes. Do this before a session, or three times a week at home.</p></div>';
+  html += '<div class="grid">'+ plan.map((r,i)=>{
+    const s=r.s, d=dose(p,band,s);
+    const flagKey = r.flagged[0];
+    return '<div class="stretch">'+
+      '<div>'+poseSVG(s.art)+'</div>'+
+      '<div>'+
+        '<div class="st-head"><div><div class="st-num">Movement '+(i+1)+'</div><h3 style="margin:0">'+s.name+'</h3></div>'+
+        '<span class="area">'+s.area+'</span></div>'+
+        '<div class="dose"><span>'+d.sets+' sets</span><span>'+d.hold+' seconds hold</span><span>'+band.intensity+'</span>'+(s.sets!==d.sets?'<span>modified for you</span>':'')+'</div>'+
+        '<p class="small" style="margin:0 0 6px"><b>How:</b> '+s.how+'</p>'+
+        '<p class="small muted" style="margin:0"><b>Why it matters:</b> '+s.why+'</p>'+
+        '<div class="cue"><b>Safety cue:</b> '+s.cue+'</div>'+
+        (flagKey? '<div class="modify"><b>Modified for you:</b> '+s.avoid[flagKey]+'</div>':'')+
+      '</div></div>';
+  }).join('') + '</div>';
+
+  /* session settings */
+  const press = p.pressure==='therapist' ? band.pressure : (p.pressure==='light'?'Light / soothing':p.pressure==='firm'?'Firm / deep':'Medium');
+  html += '<div class="sec-head" style="margin-top:40px"><div class="eyebrow">Step four</div><h2>Your room, set up for you</h2></div>';
+  html += '<div class="grid g3">'+
+    '<div class="card"><div class="set"><div class="ic">🌿</div><div><b>Pressure</b><span>'+press+' — within your '+band.id+' band guidance.</span></div></div></div>'+
+    '<div class="card"><div class="set"><div class="ic">🫒</div><div><b>Oil blend</b><span>'+cul.oils+'</span></div></div></div>'+
+    '<div class="card"><div class="set"><div class="ic">🍵</div><div><b>Welcome tea</b><span>'+cul.tea+'</span></div></div></div>'+
+    '<div class="card"><div class="set"><div class="ic">🎵</div><div><b>Sound</b><span>'+cul.sound+'</span></div></div></div>'+
+    '<div class="card"><div class="set"><div class="ic">♨️</div><div><b>Heat</b><span>'+cul.heat+(p.age>=60?' — kept moderate for your age band.':'')+'</span></div></div></div>'+
+    '<div class="card"><div class="set"><div class="ic">👋</div><div><b>Welcome</b><span>“'+cul.hi+'” — '+cul.extra+'</span></div></div></div>'+
+  '</div>';
+
+  /* cautions */
+  if(condNotes.length){
+    html += '<div class="sec-head" style="margin-top:40px"><div class="eyebrow">Important</div><h2>Your health flags — read these</h2></div>';
+    html += '<div class="grid g2">'+ condNotes.map(c=>
+      '<div class="card" style="border-left:4px solid var(--stop)"><h3 style="color:var(--stop)">'+CONDITIONS[c].label+'</h3><p class="small" style="margin:0">'+CONDITIONS[c].advice+'</p></div>'
+    ).join('') + '</div>';
+  }
+
+  if(clearance.length){
+    html += '<div class="note" style="margin-top:18px;border-left:4px solid var(--warn)"><b>Doctor\'s clearance needed before we start:</b> '+
+      clearance.map(c=>CONDITIONS[c].label).join(', ')+'. Please bring a note or have your practitioner confirm — we will happily reschedule rather than take the risk.</div>';
+  }
+
+  html += '<div class="note" style="margin-top:18px"><b>Remember:</b> this is general wellness guidance, not medical advice, diagnosis or treatment. It does not replace care from your doctor, physiotherapist or midwife. Stop any movement that hurts, and tell your therapist everything.</div>';
+
+  /* CTA */
+  html += '<div class="cta" style="margin-top:34px">'+
+    '<div><div class="eyebrow" style="color:var(--gold-soft)">Step five</div><h2>Ready when you are'+(p.name? ', '+p.name:'')+'.</h2>'+
+    '<p>Bring this plan to your first visit — or send it to us and we will pre-set your room: '+press.toLowerCase()+' pressure, '+cul.oils.split(',')[0]+', and a '+cul.tea.split(' ')[0]+' waiting for you.</p></div>'+
+    '<div><button class="btn btn-gold" onclick="window.print()">Print / save my plan as PDF</button>'+
+    '<button class="btn btn-ghost" style="margin-top:10px;color:#fff;border-color:rgba(255,255,255,.4)" onclick="window.scrollTo({top:0})">Edit my profile</button></div>'+
+  '</div>';
+
+  const inner = document.getElementById('resultsInner');
+  inner.innerHTML = html;
+  document.getElementById('results').classList.remove('hidden');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ============================================================
+   UI WIRING
+   ============================================================ */
+function buildOptions(){
+  // shapes
+  document.getElementById('shapeGrid').innerHTML = SHAPES.map((s,i)=>
+    '<div class="shape'+(i===2?' on':'')+'" data-v="'+s.id+'" tabindex="0">'+s.svg+'<b>'+s.name+'</b><i>'+s.tag+'</i></div>').join('');
+  // goals
+  document.getElementById('goalPicks').innerHTML = Object.keys(GOALS).map((k,i)=>
+    '<label class="pick'+(i<2?' on':'')+'"><input type="checkbox" value="'+k+'"'+(i<2?' checked':'')+' />'+GOALS[k].label+'</label>').join('');
+  // conditions
+  document.getElementById('condPicks').innerHTML = Object.keys(CONDITIONS).map((k,i)=>
+    '<label class="pick'+(i===0?' on':'')+'"><input type="checkbox" value="'+k+'"'+(i===0?' checked':'')+' />'+CONDITIONS[k].label+'</label>').join('');
+}
+
+function syncPicks(){
+  document.querySelectorAll('.pick').forEach(l=>{
+    const i=l.querySelector('input');
+    if(!i) return;
+    if(i.type==='checkbox'){
+      l.classList.toggle('on', i.checked);
+    } else {
+      l.classList.toggle('on', i.checked);
+    }
+  });
+  // radio groups need group-wide sync
+  ['sex','culture','pressure','exp'].forEach(n=>{
+    const checked=document.querySelector('input[name='+n+']:checked');
+    document.querySelectorAll('input[name='+n+']').forEach(i=>{
+      i.closest('.pick').classList.toggle('on', i.checked);
+    });
+  });
+}
+
+function ageUpdate(){
+  const v=document.getElementById('ageRange').value;
+  document.getElementById('ageBadge').textContent=v;
+  const b=bandFor(parseInt(v,10));
+  document.getElementById('bandPreview').innerHTML='Band: '+b.id+' · '+b.label.split('· ')[1]+' · '+b.hold+' holds';
+}
+
+function applyPreset(key){
+  const presets={
+    teen:{name:'Sipho',age:17,sex:'male',culture:'southafrican',body:'athletic',pressure:'firm',exp:'some',goals:['sport','posture','flex'],conditions:['none']},
+    mid:{name:'Priya',age:38,sex:'female',culture:'indian',body:'curvy',pressure:'medium',exp:'some',goals:['pain','stress','posture'],conditions:['none']},
+    senior:{name:'Mei',age:68,sex:'female',culture:'asian',body:'fuller',pressure:'light',exp:'regular',goals:['sleep','relax','pain'],conditions:['hbp','arthritis']}
+  };
+  const d=presets[key]; if(!d) return;
+  document.getElementById('name').value=d.name;
+  document.getElementById('ageRange').value=d.age;
+  document.querySelectorAll('input[name=sex]').forEach(i=>i.checked=(i.value===d.sex));
+  document.querySelectorAll('input[name=culture]').forEach(i=>i.checked=(i.value===d.culture));
+  document.querySelectorAll('input[name=pressure]').forEach(i=>i.checked=(i.value===d.pressure));
+  document.querySelectorAll('input[name=exp]').forEach(i=>i.checked=(i.value===d.exp));
+  document.querySelectorAll('.shape').forEach(e=>e.classList.toggle('on', e.dataset.v===d.body));
+  document.querySelectorAll('#goalPicks input').forEach(i=>i.checked=d.goals.includes(i.value));
+  document.querySelectorAll('#condPicks input').forEach(i=>i.checked=d.conditions.includes(i.value));
+  document.getElementById('consent').checked=true;
+  ageUpdate(); syncPicks();
+  toast('Sample guest loaded — press “Create my personalised plan”.');
+}
+
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('on');
+  clearTimeout(window.__tt); window.__tt=setTimeout(()=>t.classList.remove('on'),3200);
+}
+
+function loadSaved(){
+  try{
+    const raw=localStorage.getItem('abs_profile');
+    if(!raw) return;
+    const d=JSON.parse(raw);
+    document.getElementById('name').value=d.name||'';
+    document.getElementById('ageRange').value=d.age||34;
+    document.querySelectorAll('input[name=sex]').forEach(i=>i.checked=(i.value===d.sex));
+    document.querySelectorAll('input[name=culture]').forEach(i=>i.checked=(i.value===d.culture));
+    document.querySelectorAll('input[name=pressure]').forEach(i=>i.checked=(i.value===d.pressure));
+    document.querySelectorAll('input[name=exp]').forEach(i=>i.checked=(i.value===d.exp));
+    document.querySelectorAll('.shape').forEach(e=>e.classList.toggle('on', e.dataset.v===d.body));
+    document.querySelectorAll('#goalPicks input').forEach(i=>i.checked=(d.goals||[]).includes(i.value));
+    document.querySelectorAll('#condPicks input').forEach(i=>i.checked=(d.conditions||[]).includes(i.value));
+    document.getElementById('savedNote').textContent='Welcome back — we reloaded your saved profile from this device.';
+  }catch(e){}
+}
+
+function init(){
+  buildOptions();
+  ageUpdate();
+  renderLibrary();
+  renderSafety();
+  loadSaved();
+
+  document.getElementById('ageRange').addEventListener('input',ageUpdate);
+
+  document.addEventListener('click',e=>{
+    const shape=e.target.closest('.shape');
+    if(shape){ document.querySelectorAll('.shape').forEach(s=>s.classList.remove('on')); shape.classList.add('on'); return; }
+    const pick=e.target.closest('.pick');
+    if(pick){
+      const i=pick.querySelector('input');
+      if(i && i.type==='checkbox'){ setTimeout(syncPicks,0); } else { setTimeout(syncPicks,0); }
+    }
+  });
+  document.addEventListener('change',e=>{
+    if(e.target.closest('#condPicks')){ setTimeout(syncPicks,0); }
+    if(e.target.closest('#goalPicks')){ setTimeout(syncPicks,0); }
+    if(e.target.closest('.pick')){ setTimeout(syncPicks,0); }
+  });
+
+  document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>applyPreset(b.dataset.preset)));
+  document.getElementById('resetBtn').addEventListener('click',()=>{ localStorage.removeItem('abs_profile'); location.reload(); });
+
+  document.getElementById('intakeForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!document.getElementById('consent').checked){ toast('Please tick the consent box first.'); return; }
+    const p=collect();
+    localStorage.setItem('abs_profile',JSON.stringify(p));
+    document.getElementById('savedNote').textContent='Profile saved on this device.';
+    renderResults(p);
+  });
+
+  /* deep-link demo: ?demo=1&name=..&age=..&sex=..&body=..&culture=..&goals=a,b&conditions=a,b */
+  const q=new URLSearchParams(location.search);
+  if(q.get('demo')){
+    const set=(sel,val)=>{document.querySelectorAll(sel).forEach(i=>i.checked=(i.value===val));};
+    if(q.get('name')) document.getElementById('name').value=q.get('name');
+    if(q.get('age')) document.getElementById('ageRange').value=q.get('age');
+    set('input[name=sex]',q.get('sex')||'female');
+    set('input[name=culture]',q.get('culture')||'blended');
+    set('input[name=pressure]',q.get('pressure')||'medium');
+    set('input[name=exp]',q.get('exp')||'some');
+    if(q.get('body')) document.querySelectorAll('.shape').forEach(e=>e.classList.toggle('on',e.dataset.v===q.get('body')));
+    if(q.get('goals')) document.querySelectorAll('#goalPicks input').forEach(i=>i.checked=q.get('goals').split(',').includes(i.value));
+    if(q.get('conditions')) document.querySelectorAll('#condPicks input').forEach(i=>i.checked=q.get('conditions').split(',').includes(i.value));
+    document.getElementById('consent').checked=true;
+    ageUpdate(); syncPicks();
+    renderResults(collect());
+  }
+}
+document.addEventListener('DOMContentLoaded',init);
+</script>
+
+<!-- ===== PWA: install prompt, offline state, service worker ===== -->
+<div class="netbadge" id="netBadge" role="status" aria-live="polite"><span id="netText">You are offline — the app still works</span></div>
+
+<div class="appbar" id="appBar" role="dialog" aria-label="Install Asian Blend Spa">
+  <div class="txt"><b>Install Asian Blend Spa</b><span>Add it to your home screen — works offline</span></div>
+  <button id="installBtn" type="button">Install</button>
+  <button class="x" id="dismissBtn" type="button" aria-label="Not now">&times;</button>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- service worker ---------- */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js', { scope: './' })
+        .then(function (reg) {
+          window.__swReg = reg;
+          console.log('[ABS] service worker registered, scope:', reg.scope);
+          reg.addEventListener('updatefound', function () {
+            var nw = reg.installing;
+            if (!nw) return;
+            nw.addEventListener('statechange', function () {
+              if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+                console.log('[ABS] new version ready — will apply on next open');
+              }
+            });
+          });
+        })
+        .catch(function (err) { console.warn('[ABS] service worker failed:', err); });
+    });
+  }
+
+  /* ---------- online / offline badge ---------- */
+  var badge = document.getElementById('netBadge');
+  var netText = document.getElementById('netText');
+  function netState() {
+    if (!badge) return;
+    if (navigator.onLine) {
+      badge.classList.remove('on');
+    } else {
+      netText.textContent = 'You are offline — the app still works';
+      badge.classList.add('on');
+      badge.classList.remove('ok');
+    }
+  }
+  window.addEventListener('online', netState);
+  window.addEventListener('offline', netState);
+  setTimeout(netState, 400);
+
+  /* ---------- install prompt ---------- */
+  var bar = document.getElementById('appBar');
+  var deferred = null;
+  var standalone = window.matchMedia('(display-mode: standalone)').matches ||
+                   window.navigator.standalone === true;
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferred = e;
+    if (!standalone && bar && !sessionStorage.getItem('abs_install_dismissed')) {
+      setTimeout(function () { bar.classList.add('on'); }, 1400);
+    }
+  });
+
+  var ib = document.getElementById('installBtn');
+  if (ib) ib.addEventListener('click', function () {
+    if (!deferred) return;
+    bar.classList.remove('on');
+    deferred.prompt();
+    deferred.userChoice.then(function (c) {
+      console.log('[ABS] install choice:', c.outcome);
+      deferred = null;
+    });
+  });
+
+  var db = document.getElementById('dismissBtn');
+  if (db) db.addEventListener('click', function () {
+    bar.classList.remove('on');
+    try { sessionStorage.setItem('abs_install_dismissed', '1'); } catch (e) {}
+  });
+
+  window.addEventListener('appinstalled', function () {
+    if (bar) bar.classList.remove('on');
+    console.log('[ABS] app installed');
+  });
+
+  /* ---------- iOS has no beforeinstallprompt: show a hint instead ---------- */
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isIOS && !standalone && bar && !sessionStorage.getItem('abs_install_dismissed')) {
+    bar.querySelector('.txt span').textContent = 'Tap Share, then "Add to Home Screen"';
+    var ibb = document.getElementById('installBtn');
+    if (ibb) ibb.textContent = 'Got it';
+    if (ib) ib.addEventListener('click', function () {
+      bar.classList.remove('on');
+      try { sessionStorage.setItem('abs_install_dismissed', '1'); } catch (e) {}
+    });
+    setTimeout(function () { bar.classList.add('on'); }, 2200);
+  }
+
+  /* expose a tiny hook so an automated test can confirm the shell is live */
+  window.__absApp = { standalone: standalone, version: '1.0.0' };
+})();
+</script>
+</body>
+</html>
