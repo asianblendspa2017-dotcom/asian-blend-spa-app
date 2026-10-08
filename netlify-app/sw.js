@@ -4,7 +4,7 @@
    keep a versioned cache and clean up old versions on activate.
    ============================================================ */
 
-const VERSION = 'v1.0.0';
+const VERSION = 'v1.1.0';
 const CACHE = 'asian-blend-spa-' + VERSION;
 
 /* Every local asset the app needs to run with zero network. */
@@ -16,7 +16,9 @@ const CORE = [
   './icons/icon-180.png',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './icons/icon-512-maskable.png'
+  './icons/icon-512-maskable.png',
+  './images/logo.png',
+  './images/logo-mark.png'
 ];
 
 /* ---------- install: precache the shell ---------- */

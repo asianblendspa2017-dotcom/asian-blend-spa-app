@@ -2,46 +2,111 @@
   "id": "asian-blend-spa",
   "name": "Asian Blend Spa — Therapy & Stretch Studio",
   "short_name": "Asian Blend Spa",
-  "description": "Personalised Asian-inspired therapy and guided stretch plans for every age from 16 to 70, every body shape, and South African, Asian and Indian guests. Works offline.",
+  "description": "Personalised Asian-inspired therapy and guided stretch plans, built around our specialty, Philippine Hilot. For every age from 16 to 70, every body shape, and South African, Filipino, Asian and Indian guests. Works offline.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui", "browser"],
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
   "orientation": "any",
   "background_color": "#FBF7F0",
   "theme_color": "#1F4B43",
   "lang": "en",
   "dir": "ltr",
-  "categories": ["health", "lifestyle", "medical", "fitness"],
+  "categories": [
+    "health",
+    "lifestyle",
+    "medical",
+    "fitness"
+  ],
   "prefer_related_applications": false,
   "icons": [
-    { "src": "icons/favicon-32.png", "sizes": "32x32", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "shortcuts": [
+    {
+      "name": "Philippine Hilot",
+      "short_name": "Hilot",
+      "description": "Our signature Filipino healing massage — ritual and prices",
+      "url": "./#hilot",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
     {
       "name": "Build my plan",
       "short_name": "My plan",
       "description": "Open the personalised intake form",
       "url": "./#intake",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Therapy menu",
       "short_name": "Therapies",
-      "description": "Browse the nine Asian therapy traditions",
+      "description": "Browse the ten Asian therapy traditions",
       "url": "./#library",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Safety & contraindications",
       "short_name": "Safety",
       "description": "Read the contraindications before booking",
       "url": "./#safety",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }

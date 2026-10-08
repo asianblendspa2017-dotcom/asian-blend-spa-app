@@ -11,10 +11,12 @@
   --gold:#C9A227; --gold-soft:#E8D9A0; --clay:#B87A5A;
   --ink:#22302C; --ink-soft:#546862; --line:#E2D7C8;
   --warn:#B8860B; --stop:#A63A2E; --ok:#2E6B5E;
+  --orchid:#86278C; --orchid-soft:#F3E4F2; --leaf:#178F57;
   --r:18px; --r-sm:12px; --sh:0 10px 30px rgba(31,75,67,.10); --sh-sm:0 4px 14px rgba(31,75,67,.08);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:76px}
 body{
   margin:0;color:var(--ink);background:var(--cream);line-height:1.62;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -40,7 +42,7 @@ a{color:var(--jade-2)}
 .topbar{position:sticky;top:0;z-index:60;background:rgba(251,247,240,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--jade)}
-.mark{width:40px;height:40px;flex:0 0 40px}
+.mark{height:44px;width:auto;flex:0 0 auto}
 .brand strong{display:block;font-family:Georgia,serif;font-size:1.06rem;letter-spacing:.01em;line-height:1.15}
 .brand em{display:block;font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
 .nav{display:flex;gap:22px;flex-wrap:wrap}
@@ -65,6 +67,43 @@ a{color:var(--jade-2)}
 .btn-ghost{background:transparent;color:var(--jade);border:1.5px solid var(--jade-4)}
 .btn-ghost:hover{border-color:var(--jade);background:rgba(63,133,119,.07)}
 .btn-sm{padding:9px 16px;font-size:.83rem}
+
+/* ---------- hero logo ---------- */
+.hero-logo{width:min(320px,80%);height:auto;display:block}
+
+/* ---------- Philippine Hilot (signature) ---------- */
+#hilot{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  /* banig: woven Filipino sleeping-mat texture */
+  background-image:repeating-linear-gradient(45deg,rgba(23,143,87,.045) 0 10px,transparent 10px 20px),repeating-linear-gradient(-45deg,rgba(134,39,140,.04) 0 10px,transparent 10px 20px)}
+.hilot-top{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:start}
+.hilot-top h2 span{color:var(--orchid)}
+.tl{font-family:Georgia,serif;font-style:italic;color:var(--orchid)}
+.ginhawa{margin-top:18px;background:var(--orchid-soft);border-left:4px solid var(--orchid);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:14px 18px}
+.ginhawa b{display:block;font-family:Georgia,serif;font-style:italic;font-size:1.5rem;color:var(--orchid);font-weight:600;line-height:1.1}
+.ginhawa span{font-size:.88rem;color:var(--ink-soft)}
+.price-card{background:var(--jade);color:#fff;border-radius:22px;padding:26px;box-shadow:var(--sh)}
+.price-card h3{color:#fff;margin-bottom:2px}
+.price-card .sig{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold-soft)}
+.price-card .sub{font-size:.86rem;color:rgba(255,255,255,.75);margin-bottom:12px}
+.price-card table{width:100%;border-collapse:collapse;margin-bottom:16px}
+.price-card td{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.25);font-size:.95rem}
+.price-card td:last-child{text-align:right;font-family:Georgia,serif;font-size:1.15rem}
+.price-card td small{display:block;font-size:.74rem;color:rgba(255,255,255,.6)}
+.price-card .btns{display:flex;gap:10px;flex-wrap:wrap}
+.price-card .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.price-card .note-new{font-size:.8rem;color:var(--gold-soft);margin:12px 0 0}
+.ritual{margin-top:30px}
+.ritual .step{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.ritual .step .n{font-size:.72rem;letter-spacing:.16em;font-weight:700;color:var(--clay)}
+.ritual .step svg{width:40px;height:40px;color:var(--leaf);display:block;margin:10px 0 8px}
+.ritual .step h4{font-family:Georgia,serif;font-style:italic;font-size:1.25rem;color:var(--orchid);margin:0}
+.ritual .step .en{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin:2px 0 8px}
+.ritual .step p{font-size:.88rem;color:var(--ink-soft);margin:0}
+.benefits{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.benefit{display:flex;align-items:center;gap:9px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:.86rem;font-weight:600;color:var(--jade)}
+.benefit:before{content:"";width:9px;height:9px;flex:0 0 9px;border-radius:50% 0 50% 0;background:linear-gradient(135deg,var(--leaf),var(--orchid))}
+.ther-card.signature{border:2px solid var(--gold);box-shadow:0 10px 30px rgba(201,162,39,.18)}
+.r-sig{background:var(--orchid-soft);color:var(--orchid)}
 
 /* ---------- sections ---------- */
 section{padding:46px 0}
@@ -97,6 +136,7 @@ input[type=range]{width:100%;accent-color:var(--jade-2)}
 .pick input{position:absolute;opacity:0;pointer-events:none}
 .pick.on{background:var(--jade);border-color:var(--jade);color:#fff}
 .pick.on.culture{background:var(--clay);border-color:var(--clay)}
+.brand strong{color:var(--leaf)}
 .shape-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .shape{border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--cream);cursor:pointer;padding:12px 8px;text-align:center;transition:.15s}
 .shape svg{width:44px;height:66px;display:block;margin:0 auto 6px}
@@ -186,6 +226,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
 @media(max-width:980px){
   .hero-in,.cta{grid-template-columns:1fr}
   .hero-art{order:-1}
+  .hilot-top{grid-template-columns:1fr}
+  .benefits{grid-template-columns:repeat(2,1fr)}
   .g3,.g4{grid-template-columns:repeat(2,1fr)}
   .shape-grid{grid-template-columns:repeat(3,1fr)}
   .stretch{grid-template-columns:130px 1fr}
@@ -195,6 +237,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
   h1{font-size:1.85rem}
   .fgrid,.g2{grid-template-columns:1fr}
   .g3,.g4{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr}
   .shape-grid{grid-template-columns:repeat(2,1fr)}
   .stretch{grid-template-columns:1fr}
   .form-card,.banner,.cta{padding:22px}
@@ -209,7 +252,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
 <!-- ===== PWA / installable app ===== -->
 <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#1F4B43" />
-<meta name="description" content="Personalised Asian-inspired therapy and guided stretch plans for every age from 16 to 70, every body shape, and South African, Asian and Indian guests. Works offline." />
+<meta name="description" content="Personalised Asian-inspired therapy and guided stretch plans, built around our specialty, Philippine Hilot. For every age from 16 to 70, every body shape, and South African, Filipino, Asian and Indian guests. Works offline." />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -272,16 +315,11 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
 <header class="topbar">
   <div class="wrap topbar-in">
     <a class="brand" href="#top">
-      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="19" fill="#1F4B43"/>
-        <path d="M20 8.5c3.1 4.2 3.1 8.4 0 12.6-3.1-4.2-3.1-8.4 0-12.6z" fill="#C9A227"/>
-        <path d="M10.5 13.5c5.2 0 8.6 2.6 9.6 7.4-5.2 0-8.6-2.6-9.6-7.4z" fill="#EAD9CD"/>
-        <path d="M29.5 13.5c-5.2 0-8.6 2.6-9.6 7.4 5.2 0 8.6-2.6 9.6-7.4z" fill="#EAD9CD"/>
-        <path d="M12.4 25.4c4.2-3.1 8.4-3.1 12.6 0-4.2 3.1-8.4 3.1-12.6 0z" fill="#8FBFB2"/>
-      </svg>
+      <img class="mark" src="images/logo-mark.png" alt="" width="28" height="44" />
       <span><strong>Asian Blend Spa</strong><em>Therapy &amp; Stretch Studio</em></span>
     </a>
     <nav class="nav">
+      <a href="#hilot">Philippine Hilot</a>
       <a href="#intake">Your profile</a>
       <a href="#results">Your plan</a>
       <a href="#library">Therapies</a>
@@ -293,37 +331,88 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
 <section class="hero">
   <div class="wrap hero-in">
     <div>
-      <div class="eyebrow">Thai · Japanese · Chinese · Ayurvedic</div>
+      <div class="eyebrow">Philippine Hilot · Thai · Japanese · Chinese · Ayurvedic</div>
       <h1>Quality Asian-inspired therapies, <span>shaped around one body: yours.</span></h1>
-      <p class="lede">Tell us your age, your build, your goals and where you come from. Asian Blend Spa builds you a personal therapy blend and a guided stretch routine — from 16 to 70, every body shape, every background. For South African, Asian and Indian guests, in the language of welcome you know.</p>
+      <p class="lede">Tell us your age, your build, your goals and where you come from. Built around our specialty, the ancient Filipino healing art of <b>Philippine Hilot</b>, Asian Blend Spa creates a personal therapy blend and a guided stretch routine for you — from 16 to 70, every body shape, every background. For South African, Filipino, Asian and Indian guests, in the language of welcome you know.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#intake">Build my personalised plan</a>
-        <a class="btn btn-ghost" href="#library">See the therapy menu</a>
+        <a class="btn btn-ghost" href="#hilot">Discover Philippine Hilot</a>
       </div>
       <div class="chips" style="margin-top:26px">
-        <span class="chip dark">14 guided stretches</span>
-        <span class="chip dark">9 therapy traditions</span>
+        <span class="chip dark">13 guided stretches</span>
+        <span class="chip dark">10 therapy traditions</span>
         <span class="chip dark">6 age bands, 16–70</span>
         <span class="chip dark">5 body shapes</span>
         <span class="chip dark">Evidence-rated</span>
       </div>
     </div>
     <div class="hero-art">
-      <svg viewBox="0 0 300 320" width="300" height="320" aria-hidden="true">
-        <defs>
-          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#2E6B5E"/><stop offset="1" stop-color="#1F4B43"/>
-          </linearGradient>
-        </defs>
-        <circle cx="150" cy="120" r="108" fill="url(#hg)"/>
-        <path d="M150 26c22 30 22 60 0 90-22-30-22-60 0-90z" fill="#C9A227" opacity=".95"/>
-        <path d="M60 60c40-6 70 10 84 44-40 6-70-10-84-44z" fill="#EAD9CD" opacity=".9"/>
-        <path d="M240 60c-40-6-70 10-84 44 40 6 70-10 84-44z" fill="#EAD9CD" opacity=".9"/>
-        <path d="M74 156c40-24 76-24 116 0-40 24-76 24-116 0z" fill="#8FBFB2" opacity=".85"/>
-        <ellipse cx="150" cy="232" rx="74" ry="17" fill="#3F8577" opacity=".5"/>
-        <ellipse cx="150" cy="264" rx="58" ry="14" fill="#3F8577" opacity=".38"/>
-        <ellipse cx="150" cy="292" rx="42" ry="11" fill="#3F8577" opacity=".28"/>
-      </svg>
+      <img class="hero-logo" src="images/logo.png" alt="Asian Blend Spa — Home of Tranquility" width="320" height="286" />
+    </div>
+  </div>
+</section>
+
+<section id="hilot">
+  <div class="wrap">
+    <div class="hilot-top">
+      <div>
+        <div class="eyebrow">Our specialty · Philippine Hilot</div>
+        <h2>The healing hands of the Philippines, <span>here in Cape Town.</span></h2>
+        <p class="muted">Long before spas, every Filipino village had its <span class="tl">manghihilot</span>, a traditional healer whose skill was handed down from elder to apprentice within families for generations. <b>Hilot</b> comes from the Tagalog word for rubbing and pressing. It is an intuitive, hands-on art that combines massage, gentle joint alignment and energy work to bring the body back into balance.</p>
+        <p class="muted">As Cape Town's first Filipino massage clinic, Hilot is the heart of Asian Blend Spa. Every session is personal: your therapist reads your body first, then works where you actually need it, not to a fixed routine.</p>
+        <div class="ginhawa"><b>Ginhawa</b><span>The Filipino word for relief, ease and well-being. It's the feeling Hilot is meant to leave you with.</span></div>
+      </div>
+      <aside class="price-card" aria-label="Philippine Hilot prices">
+        <div class="sig">Signature treatment</div>
+        <h3>Philippine Hilot Massage</h3>
+        <div class="sub">Whole-body Hilot with warm coconut oil &amp; banana leaf</div>
+        <table>
+          <tr><td>30 min<small>Focused area (except back)</small></td><td>R350</td></tr>
+          <tr><td>60 min</td><td>R600</td></tr>
+          <tr><td>90 min</td><td>R800</td></tr>
+          <tr><td>2 hours</td><td>R950</td></tr>
+        </table>
+        <div class="btns">
+          <a class="btn btn-gold btn-sm" href="https://wa.me/27840377167?text=Hi%20Asian%20Blend%20Spa%2C%20I%27d%20like%20to%20book%20a%20Philippine%20Hilot%20massage." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn btn-ghost btn-sm" href="https://www.fresha.com/a/asian-blend-spa-home-of-tranquility-cape-town-55-porterfield-road-wdeh2u6j" target="_blank" rel="noopener">Book on Fresha</a>
+        </div>
+        <p class="note-new">New clients save 10% on their first Hilot booking.</p>
+      </aside>
+    </div>
+
+    <div class="ritual">
+      <h3>The Hilot ritual: four traditional steps</h3>
+      <div class="grid g4">
+        <div class="step"><div class="n">01</div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 30c0-6 4-12 10-14M34 30c0-6-4-12-10-14"/><path d="M10 34c4 4 9 6 14 6s10-2 14-6"/><circle cx="24" cy="12" r="3"/></svg>
+          <h4>Pakiramdam</h4><div class="en">Feeling the body</div>
+          <p>Before any pressure, your therapist reads the body with open palms, finding where tension and <span class="tl">lamig</span> (trapped cold) have settled.</p></div>
+        <div class="step"><div class="n">02</div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40C14 22 26 10 42 8c-2 16-14 28-32 32z"/><path d="M8 40L34 16M18 30l-4-8M24 24l-2-9M28 28l8-1M22 34l9 1"/></svg>
+          <h4>Dahon ng saging</h4><div class="en">Warm banana leaf</div>
+          <p>Warmed banana leaves are laid across the back. Traditionally, the leaf dries fastest where heat and tension gather, showing where the work is needed.</p></div>
+        <div class="step"><div class="n">03</div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6c-8 10-12 17-12 23a12 12 0 0 0 24 0c0-6-4-13-12-23z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg>
+          <h4>Langis ng niyog</h4><div class="en">Warm coconut oil</div>
+          <p>Warm virgin coconut oil, long rhythmic palm strokes, and thumb and forearm pressure release knots, ease the joints and restore energy flow.</p></div>
+        <div class="step"><div class="n">04</div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30h36"/><path d="M12 30a12 12 0 0 1 24 0"/><path d="M24 10v4M12 15l3 3M36 15l-3 3M6 38h36"/></svg>
+          <h4>Pahinga</h4><div class="en">Rest &amp; restore</div>
+          <p>A slow, unhurried close with gentle stretching, so your nervous system settles before you step back into your day.</p></div>
+      </div>
+    </div>
+
+    <div class="ritual">
+      <h3>Why guests come back for Hilot</h3>
+      <div class="benefits">
+        <div class="benefit">Deep muscle relaxation</div>
+        <div class="benefit">Improved circulation</div>
+        <div class="benefit">Pain relief</div>
+        <div class="benefit">Flexibility &amp; mobility</div>
+        <div class="benefit">Detoxification</div>
+        <div class="benefit">Stress reduction</div>
+        <div class="benefit">Balanced energy flow</div>
+        <div class="benefit">Postural correction</div>
+        <div class="benefit">Easier digestion</div>
+        <div class="benefit">Holistic healing</div>
+      </div>
+      <p class="small muted" style="margin-top:14px">These are what our guests tell us and what Hilot is traditionally used for. They are not medical claims. Hilot is wellness care, not a substitute for your doctor. Please tell us about any injury, pregnancy or medical condition when you book.</p>
     </div>
   </div>
 </section>
@@ -355,6 +444,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
             <label for="culture">Cultural welcome you prefer</label>
             <div class="picks" id="culturePicks">
               <label class="pick culture" data-v="southafrican"><input type="radio" name="culture" value="southafrican" />South African</label>
+              <label class="pick culture" data-v="filipino"><input type="radio" name="culture" value="filipino" />Filipino</label>
               <label class="pick culture" data-v="asian"><input type="radio" name="culture" value="asian" />Asian</label>
               <label class="pick culture" data-v="indian"><input type="radio" name="culture" value="indian" />Indian</label>
               <label class="pick culture" data-v="blended"><input type="radio" name="culture" value="blended" />Blended / no preference</label>
@@ -442,7 +532,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">The menu</div>
-      <h2>Nine traditions, honestly rated</h2>
+      <h2>Ten traditions, honestly rated</h2>
       <p>We quote benefits conservatively and label how solid the research is. "Strong" means several good trials agree. "Mixed" means the science is genuinely divided — we will still tell you what guests report, but we will not dress it up as proven.</p>
     </div>
     <div class="grid g2" id="libraryGrid"></div>
@@ -486,7 +576,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--ink-soft
     <div>
       <strong style="color:var(--jade)">Asian Blend Spa</strong><br />
       Therapy &amp; Stretch Studio · Personalised Asian-inspired bodywork<br />
-      Serving South African, Asian and Indian guests — and everyone in between.
+      Serving South African, Filipino, Asian and Indian guests — and everyone in between.<br />
+      55 Porterfield Road, Bloubergstrand, Cape Town · <a href="https://wa.me/27840377167" target="_blank" rel="noopener">WhatsApp 084 037 7167</a>
     </div>
     <div style="max-width:44ch">
       Evidence sources are linked on each therapy card (PubMed / PMC / journal). Wellness guidance only — not medical advice.
@@ -510,6 +601,14 @@ const CULTURE = {
     tea:'Rooibos with honeybush and a slice of naartjie',
     sound:'Marimba and low mbira tones',
     heat:'Warm towels, moderate room heat'
+  },
+  filipino:{
+    label:'Filipino', hi:'Mabuhay', plural:'Maligayang pagdating',
+    meaning:'“Welcome” — Filipino', extra:'Magandang araw · Maligayang pagdating · Salamat po',
+    oils:'Warm virgin coconut oil with ginger and lemongrass',
+    tea:'Salabat (hot ginger tea) with calamansi and honey',
+    sound:'Kulintang gongs and soft kudyapi',
+    heat:'Warm banana leaves and warm towels'
   },
   asian:{
     label:'Asian', hi:'Sawasdee', plural:'Yindee tonrap',
@@ -635,6 +734,15 @@ const CONDITIONS = {
 
 /* ---------- therapies ---------- */
 const THERAPIES = [
+  {id:'hilot', name:'Philippine Hilot', origin:'Philippines — our specialty', intensity:'medium', signature:true,
+   tags:['pain','mobility','circulation','stress','relax','posture'], cultures:['filipino','asian','indian','southafrican','blended'],
+   desc:'The traditional healing massage of the Philippines, passed down through generations of manghihilot. Your therapist first reads the body with the palms, then works with warm virgin coconut oil, warmed banana leaves and rhythmic palm, thumb and forearm pressure.',
+   benefits:['Guests come to us for deep muscle relaxation, pain relief and easier movement','Warm coconut oil and banana leaf make it one of the most soothing treatments we offer','Fully personalised: pressure and focus follow what the therapist feels, not a fixed routine'],
+   ev:'Emerging', evLabel:'Hilot is officially recognised in the Philippines as a traditional healing practice, but very few clinical trials have studied it specifically. Its relaxation and muscle-tension benefits are in line with massage research in general; treat broader healing claims as traditional, not proven.',
+   src:'Philippines Traditional &amp; Alternative Medicine Act (RA 8423), 1997', url:'https://lawphil.net/statutes/repacts/ra1997/ra_8423_1997.html',
+   avoid:['pregnancy','osteo','cancer'],
+   avoidWhy:'Hilot uses deep palm pressure and gentle joint alignment, which need medical clearance first with this condition.',
+   tip:'Tell us if you are allergic to coconut — we can switch the oil.'},
   {id:'thai', name:'Traditional Thai Massage', origin:'Thailand — Nuad Boran', intensity:'strong',
    tags:['pain','mobility','flexibility','recovery','posture'], cultures:['asian','indian','southafrican','blended'],
    desc:'Assisted stretching and rhythmic palm-and-thumb compression along the body\'s sen lines, done fully clothed on a floor mat.',
@@ -835,7 +943,8 @@ function rankTherapies(p){
   return THERAPIES.map(t=>{
     let score = 0;
     t.tags.forEach(g=>{ if(tags.has(g)) score += 12; });
-    if(t.cultures.includes(p.culture)) score += 5;
+    if(t.cultures.includes(p.culture) || (p.culture==='filipino' && t.cultures.includes('asian'))) score += 5;
+    if(t.signature) score += 6;                                          // our specialty
     if(p.exp==='first'){ if(t.intensity==='strong') score -= 6; else if(t.intensity==='light') score += 4; }
     if(p.exp==='regular' && t.intensity!=='light') score += 3;
     if(p.age>=60){ if(t.intensity==='strong') score -= 5; if(t.intensity==='light') score += 4; }
@@ -905,11 +1014,12 @@ function evClass(label){
 
 function renderLibrary(){
   document.getElementById('libraryGrid').innerHTML = THERAPIES.map(t=>
-    '<div class="card ther-card">'+
+    '<div class="card ther-card'+(t.signature?' signature':'')+'">'+
       '<div class="ther-top">'+
         '<div><div class="origin">'+t.origin+'</div><h3>'+t.name+'</h3></div>'+
         '<span class="ribbon '+evClass(t.ev)+'">'+t.ev+' evidence</span>'+
       '</div>'+
+      (t.signature?'<span class="ribbon r-sig" style="align-self:flex-start">Our specialty · <a href="#hilot">about Hilot</a></span>':'')+
       '<p class="tagline">'+t.desc+'</p>'+
       '<ul class="clean">'+t.benefits.map(b=>'<li>'+b+'</li>').join('')+'</ul>'+
       '<div class="evidence"><b>Research:</b> '+t.evLabel+' <a href="'+t.url+'" target="_blank" rel="noopener">'+t.src+'</a></div>'+
@@ -977,7 +1087,7 @@ function renderResults(p){
     '<p>Ranked for your goals, your body and your cultural preference. Evidence is rated honestly — we would rather you trust four claims than doubt ten.</p></div>';
   html += '<div class="grid g2">'+ top.map(r=>{
     const t=r.t;
-    return '<div class="card ther-card">'+
+    return '<div class="card ther-card'+(t.signature?' signature':'')+'">'+
       '<div class="ther-top">'+
         '<div><div class="origin">'+t.origin+'</div><h3>'+t.name+'</h3></div>'+
         '<div class="scorebox"><div class="score">'+Math.min(99,Math.max(40,r.score+40))+'</div><i>match</i></div>'+
@@ -1311,7 +1421,7 @@ document.addEventListener('DOMContentLoaded',init);
   }
 
   /* expose a tiny hook so an automated test can confirm the shell is live */
-  window.__absApp = { standalone: standalone, version: '1.0.0' };
+  window.__absApp = { standalone: standalone, version: '1.1.0' };
 })();
 </script>
 </body>

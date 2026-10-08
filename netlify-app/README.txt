@@ -10,6 +10,7 @@ FILES
   manifest.json                  app name, icons, colours, shortcuts
   sw.js                          service worker: precaches the shell, offline-first
   icons/                         32, 180, 192, 512 and 512-maskable PNG icons
+  images/                        logo.png (full logo) and logo-mark.png (top bar)
 
 IMPORTANT — IT MUST BE SERVED OVER HTTPS
   Service workers (the offline engine) will NOT run from a file:// path, from a
@@ -49,7 +50,7 @@ INSTALLING IT (tell your guests)
 
 AFTER INSTALLING
   It opens full-screen with its own icon, no browser address bar. Everything
-  works offline: the intake form, all nine therapies, the fourteen stretches,
+  works offline: the intake form, all ten therapies (including Philippine Hilot), the thirteen stretches,
   the safety section. Guest profiles are saved on the device only.
 
 UPDATING THE APP LATER
